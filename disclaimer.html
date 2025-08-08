@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Disclaimer</title>
+  <link rel="stylesheet" href="css/global.css">
+  <style>
+    main {
+      max-width: 700px;
+      margin: 4rem auto;
+      padding: 2rem;
+      background: var(--color-background);
+      border: 1px solid var(--color-border);
+      border-radius: 1rem;
+    }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    p {
+      margin-bottom: 1rem;
+    }
+    .button {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background-color: var(--color-button-bg);
+      color: var(--color-button-text);
+      text-decoration: none;
+      border: 2px solid var(--color-button-border);
+      border-radius: 0.5rem;
+      font-weight: bold;
+    }
+    .button:hover {
+      background-color: var(--color-button-hover-bg);
+      color: var(--color-button-hover-text);
+      border-color: var(--color-button-hover-border);
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>🚦 Disclaimer – Please Read Before You Proceed</h1>
+    <p>Hi there 👋 — and welcome!</p>
+    <p>This site contains personal stories and reflections from my work as a Scrum Master, Agile Coach, and systems thinker. Occasionally, I also write about investing and markets.</p>
+    <p><strong>None of this is financial advice.</strong> It’s for educational and informational purposes only. I’m not FCA-regulated, and I don’t want to be.</p>
+    <p>Please don’t invest based on anything here without doing your own research. Ideally, consult a qualified financial advisor first.</p>
+    <p>By clicking below, you agree to these terms and understand this site is just a blog — not a tip sheet.</p>
+    <a class="button" href="index.html" onclick="localStorage.setItem('disclaimerAccepted', 'true')">I Accept – Take Me to the Site</a>
+  </main>
+</body>
+</html>
