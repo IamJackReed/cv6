@@ -1,63 +1,502 @@
-<!DOCTYPE html><html lang="en" data-astro-cid-5z7xtygo=""><head><meta charset="utf-8"><link rel="icon" type="image/png" href="images/favicon-96x96.png" sizes="96x96"><link rel="icon" type="image/svg+xml" href="images/favicon.svg"><link rel="shortcut icon" href="images/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="generator" content="Astro v5.12.0"><title>Jason Lengstorf</title><link rel="alternate" type="application/rss+xml" title="Jason Lengstorf’s blog" href="https://jason.energy/rss.xml"><link rel="preconnect" href="https://res.cloudinary.com"><link rel="preload" href="https://res.cloudinary.com/jlengstorf/image/upload/f_auto/q_auto/v1742186341/jason.energy/v2/header.webp" as="image"><link rel="preload" href="/fonts/TAYAmaya.woff2" as="font" type="font/woff2" crossorigin=""><link rel="preload" href="/fonts/TAYDreamboat.woff2" as="font" type="font/woff2" crossorigin=""><meta name="description" content="Jason has 20+ years of developer experience, which he combines with stage and video production expertise to help companies tell better stories."><meta name="image" content="https://res.cloudinary.com/jlengstorf/image/upload/v1743895371/jason.energy/v2/jason.energy-social-card.png"><meta property="og:type" content="website"><meta property="og:title" content="Jason Lengstorf"><meta property="og:site_name" content="Jason Lengstorf"><meta property="og:description" content="Jason has 20+ years of developer experience, which he combines with stage and video production expertise to help companies tell better stories."><meta property="og:url" content="https://jason.energy/"><meta property="og:image" content="images/jason.energy-social-card.png"><meta property="og:image:width" content="1600"><meta property="og:image:height" content="900"><meta property="og:image:alt" content="Jason Lengstorf lit in purple hues. Text is overlaid that says, " jason="" lengstof="" makes="" tv="" for="" developers="" with="" his="" friends.""=""><meta name="twitter:dnt" content="on"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:description" content="Jason has 20+ years of developer experience, which he combines with stage and video production expertise to help companies tell better stories."><meta name="twitter:image" content="https://res.cloudinary.com/jlengstorf/image/upload/v1743895371/jason.energy/v2/jason.energy-social-card.png"><style>body{background:var(--gray-700);margin:0;&:not(.simple){@supports (interpolate-size: allow-keywords){@media (min-width: 1000px){padding-top:min(100dvb,100dvi)}}}}  main[data-astro-cid-5z7xtygo]{container:main / inline-size}@font-face{font-display:swap;font-family:tay-amaya;src:url(fonts/TAYAmaya.woff2) format("woff2")}@font-face{font-display:swap;font-family:tay-dreamboat;src:url(fonts/TAYDreamboat.woff2) format("woff2")}  *{box-sizing:border-box}  :root{--white: #f5f2fb;--gray-100: #dbd4e9;--gray-600: #322942;--gray-700: #231239;--gray-900: #030626;--pink: #a20979;--purple: #4e2d88;--blue: #389fff;--orange: #bc7218;--font-heading: "tay-dreamboat", sans-serif;--font-subheading: "tay-amaya", sans-serif;--font-body: system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";background-color:var(--gray-700);color-scheme:light dark;font-family:var(--font-body);interpolate-size:allow-keywords;line-height:1.45;text-rendering:optimizeLegibility}  img{block-size:auto;display:block;max-inline-size:100%}  :is(h1,h2,h3,h4,h5,h6){font-family:var(--font-heading);font-weight:400;line-height:.8}  :is(p,li){line-height:1.45}  a{color:var(--blue)}  .fake-btn{--size: clamp(.625rem, 4.5cqi, 2.75rem);background:var(--pink);border-radius:2px;color:inherit;display:inline-block;font-size:var(--size);font-weight:500;letter-spacing:.1em;line-height:1;margin:0;padding:calc(var(--size) * .5) calc(var(--size) * .75);text-decoration:none;text-shadow:0 1px 1px color-mix(in oklch,var(--gray-900) 35%,transparent);text-transform:uppercase;transition:.15s linear all;:is(:hover,:focus)>&{background:color-mix(in oklch,var(--pink) 90%,var(--white));color:var(--white)}@media (min-width: 600px){margin-block-start:12px}}  footer[data-astro-cid-k2f5zb5c]{align-items:center;background:var(--gray-600);border-radius:3px;color:var(--gray-100);display:flex;flex-direction:column;gap:20px;justify-content:space-between;margin-block-end:4px;margin-inline:4px;padding:30px max(60px,(100dvi - 2400px) / 2);text-align:center;@media (min-width: 750px){flex-direction:initial;gap:initial;text-align:initial}div{display:flex;flex-direction:column;font-size:.875rem;font-weight:200;gap:8px;letter-spacing:.1em} p{margin:0;text-wrap:balance} ul{display:flex;flex-direction:column;gap:4px;list-style:none;margin:0;padding:0;text-align:center;@media (min-width: 750px){text-align:end}} a{color:inherit;display:inline-block;padding:6px 16px;@media (pointer: coarse){padding-block:10px}@media (any-hover: hover){text-decoration:none;&:is(:hover,:focus){text-decoration:underline}}} abbr{@media (pointer: coarse){&:after{content:" (" attr(title) ")"}}}}
-@property --font-size{syntax: "<number>"; initial-value: 1; inherits: true;}header[data-astro-cid-hpnw4vwy]{background:url(images/header.webp);background-position:center;background-size:cover;border-block-end:4px solid var(--gray-700);color:var(--white);display:flex;flex-direction:column;inline-size:100%;max-inline-size:100dvi;padding:25px 5cqi 15px;place-content:center;z-index:100;h1,p{margin:0}.name,.tagline{display:block;line-height:.8;margin:0;text-align:center;text-box-trim:trim-both;text-shadow:1px 2px var(--gray-700);text-spacing-trim:space-all}.name{font-family:var(--font-heading);font-size:calc(var(--font-size) * clamp(1rem,3.2cqi,2.5rem));&:after{background:var(--white);block-size:3px;border-radius:1px;content:"";display:block;inline-size:min(87cqi,13ch);margin-inline:auto}}.tagline{font-family:var(--font-subheading);font-size:5.65cqi;font-size:calc(var(--font-size) * clamp(.8rem,2.825cqi,2.2rem));margin-block-start:16px}nav{display:flex;flex-wrap:wrap;font-family:var(--font-heading);gap:5px;justify-content:center;margin-inline:auto;inline-size:min(var(--font-size) * 50ch,90cqi);padding-inline:1cqi;a{background:var(--purple);border-radius:1px;color:var(--white);display:inline-block;font-size:calc(var(--font-size) * clamp(.8rem,.85cqi,1rem));padding:10px 1cqi 5px;text-decoration:none;&:is(:hover,:active,:focus),&.active{background:var(--white);color:var(--gray-900)}}}}@supports (interpolate-size: allow-keywords){body:not(.simple) header{@media (min-width: 1000px){animation:header-resize cubic-bezier(0,0,.5,.55) forwards;animation-timeline:scroll();animation-range:0dvb 85dvb;block-size:100dvb;position:fixed;inset-block-start:0}}}@keyframes header-resize{0%{--font-size: 2;height:min(100dvb,100dvi)}to{--font-size: 1;height:auto}}
-</style>
+<!DOCTYPE html>
+<html lang="en" data-astro-cid-5z7xtygo="">
+<head>
+  <meta charset="utf-8">
+  <link rel="icon" type="image/png" href="images/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="shortcut icon" href="images/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="Astro v5.12.0">
+  <title>Jason Lengstorf</title>
+  <link rel="alternate" type="application/rss+xml" title="Jason Lengstorf’s blog" href="https://jason.energy/rss.xml">
+  <link rel="preconnect" href="https://res.cloudinary.com">
+  <link rel="preload" href="https://res.cloudinary.com/jlengstorf/image/upload/f_auto/q_auto/v1742186341/jason.energy/v2/header.webp" as="image">
+  <link rel="preload" href="/fonts/TAYAmaya.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="/fonts/TAYDreamboat.woff2" as="font" type="font/woff2" crossorigin="">
+  <meta name="description" content="Jason has 20+ years of developer experience, which he combines with stage and video production expertise to help companies tell better stories.">
+  <meta name="image" content="https://res.cloudinary.com/jlengstorf/image/upload/v1743895371/jason.energy/v2/jason.energy-social-card.png">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Jason Lengstorf">
+  <meta property="og:site_name" content="Jason Lengstorf">
+  <meta property="og:description" content="Jason has 20+ years of developer experience, which he combines with stage and video production expertise to help companies tell better stories.">
+  <meta property="og:url" content="https://jason.energy/">
+  <meta property="og:image" content="images/jason.energy-social-card.png">
+  <meta property="og:image:width" content="1600">
+  <meta property="og:image:height" content="900">
+  <meta property="og:image:alt" content="Jason Lengstorf lit in purple hues. Text is overlaid that says, &quot;Jason Lengstorf makes tv for developers with his friends.&quot;">
+  <meta name="twitter:dnt" content="on">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:description" content="Jason has 20+ years of developer experience, which he combines with stage and video production expertise to help companies tell better stories.">
+  <meta name="twitter:image" content="https://res.cloudinary.com/jlengstorf/image/upload/v1743895371/jason.energy/v2/jason.energy-social-card.png">
 
-	<div class="exploding-nav first-run" style="--navCount: 3">
-  <button class="exploding-nav-button">
-    <img class="face" src="images/jason-brains.png" alt="">
-    <span class="sr-only">Show Navigation</span>
-  </button>
+  <!-- Existing site CSS -->
+  <link rel="stylesheet" href="css/index.HWNu7sSl.css">
+  <!-- Exploding Nav CSS -->
+  <link rel="stylesheet" href="css/exploding-nav.css">
+</head>
+<body data-astro-cid-5z7xtygo="">
 
-  <nav class="home-page-nav">
-    <a class="home-item" href="/#practices" style="--offset: 1">
-      Patterns & Practices
-      <img src="images/camera.png" alt="">
-    </a>
+<!DOCTYPE html>
+<html lang="en" data-astro-cid-5z7xtygo="">
+<head>
+  <meta charset="utf-8">
+  <link rel="icon" type="image/png" href="images/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="shortcut icon" href="images/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="Astro v5.12.0">
+  <title>Jason Lengstorf</title>
+  <link rel="alternate" type="application/rss+xml" title="Jason Lengstorf’s blog" href="https://jason.energy/rss.xml">
+  <link rel="preconnect" href="https://res.cloudinary.com">
+  <link rel="preload" href="https://res.cloudinary.com/jlengstorf/image/upload/f_auto/q_auto/v1742186341/jason.energy/v2/header.webp" as="image">
+  <link rel="preload" href="/fonts/TAYAmaya.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="/fonts/TAYDreamboat.woff2" as="font" type="font/woff2" crossorigin="">
+  <meta name="description" content="Jason has 20+ years of developer experience, which he combines with stage and video production expertise to help companies tell better stories.">
+  <meta name="image" content="https://res.cloudinary.com/jlengstorf/image/upload/v1743895371/jason.energy/v2/jason.energy-social-card.png">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Jason Lengstorf">
+  <meta property="og:site_name" content="Jason Lengstorf">
+  <meta property="og:description" content="Jason has 20+ years of developer experience, which he combines with stage and video production expertise to help companies tell better stories.">
+  <meta property="og:url" content="https://jason.energy/">
+  <meta property="og:image" content="images/jason.energy-social-card.png">
+  <meta property="og:image:width" content="1600">
+  <meta property="og:image:height" content="900">
+  <meta property="og:image:alt" content="Jason Lengstorf lit in purple hues. Text is overlaid that says, &quot;Jason Lengstorf makes tv for developers with his friends.&quot;">
+  <meta name="twitter:dnt" content="on">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:description" content="Jason has 20+ years of developer experience, which he combines with stage and video production expertise to help companies tell better stories.">
+  <meta name="twitter:image" content="https://res.cloudinary.com/jlengstorf/image/upload/v1743895371/jason.energy/v2/jason.energy-social-card.png">
 
-    <a class="home-item" href="/#lab" style="--offset: 2">
-      The Lab
-      <img src="images/terminal.png" alt="">
-    </a>
+  <!-- Existing site CSS -->
+  <link rel="stylesheet" href="css/index.HWNu7sSl.css">
+  <!-- Exploding Nav CSS -->
+  <link rel="stylesheet" href="css/exploding-nav.css">
+</head>
+<body data-astro-cid-5z7xtygo="">
 
-    <a class="home-item" href="/#posts" style="--offset: 3">
-      Posts
-      <img src="images/newsletter.png" alt="">
-    </a>
-  </nav>
-</div>
+  <section data-astro-cid-zfotlb7l="">
+    <!-- removed the original hero image block -->
+    <div class="text" data-astro-cid-zfotlb7l="">
+      <fieldset data-astro-cid-zfotlb7l="">
+        <legend data-astro-cid-zfotlb7l="">About Jason Lengstorf</legend>
+        <label data-astro-cid-zfotlb7l="">
+          Shorter-er
+          <input type="radio" name="bio-length" value="shorterer" data-astro-cid-zfotlb7l="">
+        </label>
+        <label data-astro-cid-zfotlb7l="">
+          Shorter
+          <input type="radio" name="bio-length" value="shorter" data-astro-cid-zfotlb7l="">
+        </label>
+        <label data-astro-cid-zfotlb7l="">
+          Short
+          <input type="radio" name="bio-length" value="short" data-astro-cid-zfotlb7l="">
+        </label>
+        <label data-astro-cid-zfotlb7l="">
+          Long
+          <input type="radio" name="bio-length" value="long" checked="" data-astro-cid-zfotlb7l="">
+        </label>
+        <label data-astro-cid-zfotlb7l="">
+          Longer
+          <input type="radio" name="bio-length" value="longer" data-astro-cid-zfotlb7l="">
+        </label>
+        <label data-astro-cid-zfotlb7l="">
+          Longer-er
+          <input type="radio" name="bio-length" value="longerer" data-astro-cid-zfotlb7l="">
+        </label>
+      </fieldset>
+      <div class="bio" data-astro-cid-zfotlb7l="">
+        <p data-astro-cid-zfotlb7l="">
+          <span data-length="1" data-astro-cid-zfotlb7l="">Jason Lengstorf makes tv for developers at
+            <a href="https://codetv.dev" data-astro-cid-zfotlb7l="">CodeTV</a>.
+            <span data-length="2" data-astro-cid-zfotlb7l="">
+              He’s been building for the web since the early 2000s
+              <span data-length="3" data-astro-cid-zfotlb7l="">
+                , working jobs ranging from freelancer to agency owner to
+                frontend architect at megacorps to startup VP
+              </span>.
+            </span>
+          </span>
+          <span data-length="3" data-astro-cid-zfotlb7l=""><br data-astro-cid-zfotlb7l=""><br data-astro-cid-zfotlb7l=""></span>
+          <span data-length="6" data-astro-cid-zfotlb7l="">A lifelong educator and performer,</span>
+          <span data-length="3" data-astro-cid-zfotlb7l="">
+            Jason believes that the best way to learn and grow a healthy career
+            is through playful exploration, active community, and sharing stories.
+          </span>
+          <span data-length="4" data-astro-cid-zfotlb7l="">
+            He taps into his broad background
+            <span data-length="5" data-astro-cid-zfotlb7l="">
+              as a touring musician, designer, cook, leader, and engineer
+            </span>
+            to put together
+            <span data-length="6" data-astro-cid-zfotlb7l="">
+              creative, engaging, and unique experiences that blend video, web,
+              and in-person interaction into
+            </span>
+            creative production that’s good for the community and good for business.
+          </span>
+        </p>
+      </div>
+    </div>
+  </section>
 
-    <link rel="stylesheet" href="css/index.HWNu7sSl.css">
-    <link rel="stylesheet" href="css/exploding-nav.css">
+  <section class="links" data-astro-cid-yidrqaxb="">
+    <nav class="items" data-astro-cid-yidrqaxb="">
+      <a href="https://codetv.dev" class="item lg xs-expander xs-short" data-astro-cid-yidrqaxb="">
+        <span class="shrinky" data-astro-cid-yidrqaxb=""> This is my company: </span>
+        <img alt="CodeTV — tv for developers" class="codetv-logo" data-astro-cid-yidrqaxb="true" loading="lazy" decoding="async"
+             sizes="(min-width: 435px) 435px, 100vw"
+             style="object-fit:cover;max-width:435px;max-height:164px;aspect-ratio:2.652439024390244;width:100%"
+             srcset="images/codetv-lockup.png 435w, images/codetv-lockup_2.png 640w, images/codetv-lockup_1.png 750w, images/codetv-lockup_4.png 828w, images/codetv-lockup_3.png 870w"
+             src="images/codetv-lockup.png">
+        <span class="fake-btn" data-astro-cid-yidrqaxb=""> Watch a show � </span>
+      </a>
 
-<style>.links[data-astro-cid-yidrqaxb]{--max-size: min(100cqi, 720px);--cols: 12;--rows: 29;@media (min-width: 470px){--rows: 21}container:bento / inline-size;display:grid;grid-template-columns:repeat(var(--cols),calc((var(--max-size) / var(--cols))));grid-template-rows:repeat(var(--rows),calc((var(--max-size) / var(--cols))));inline-size:var(--max-size);margin-inline:auto;max-inline-size:2400px}.items[data-astro-cid-yidrqaxb]{align-items:start;background:var(--gray-700);display:grid;gap:4px;grid-template-columns:subgrid;grid-template-rows:subgrid;grid-column:span 12;grid-row:span 27;order:2;padding:4px;@media (min-width: 600px){grid-row:span 15}a{color:inherit;text-decoration:none}.item{align-items:center;block-size:100%;color:var(--gray-100);display:flex;flex-direction:column;gap:4px;justify-content:center;&:not(:has(.item)){background:var(--gray-600);border:1px solid transparent;border-radius:3px;container:item / inline-size;transition:all .1s ease-in-out;&:is(:hover,:active,:focus){background:var(--gray-900);border-color:var(--gray-600)}}&.lg{grid-column:span 6;grid-row:span 6;svg{block-size:auto;inline-size:80cqi}}&.md{grid-column:span 4;grid-row:span 4}&.sm{grid-column:span 3;grid-row:span 3;svg{block-size:auto;inline-size:min(40cqi,60px)}}&.span-2{grid-row:span 2}&.short{grid-row:span 3}&.xs-expander{grid-column:span 12;grid-row:span 8;&.xs-short{grid-row:span 6}@media (min-width: 470px){grid-column:span 6;grid-row:span 6}}img{block-size:auto;inline-size:60cqi;max-inline-size:70cqi!important;&.logos,&.codetv-logo{inline-size:80cqi;max-inline-size:80cqi!important}}&.social{display:flex;flex-direction:column;font-size:clamp(.75rem,2cqi,1rem);gap:6px;img{max-inline-size:min(32cqi,60px)!important}}}}.image[data-astro-cid-yidrqaxb]{background:var(--gray-700);border:4px solid transparent;border-block-end:0;block-size:100%;grid-column:span 12;grid-row:span 6;inline-size:100%;margin:0;order:1;position:relative;img{block-size:100%;border-radius:3px;display:block;inline-size:100%;object-fit:cover;object-position:50% 7%}figcaption{background:color-mix(in oklch,var(--gray-600) 50%,transparent);backdrop-filter:blur(6px);border-radius:3px;color:var(--gray-100);inset-block-end:10px;inset-inline-end:10px;position:absolute;z-index:10;a{color:inherit;display:block;font-size:.75rem;line-height:1;padding:8px 12px;text-decoration:none}}}.shrinky[data-astro-cid-yidrqaxb]{font-size:clamp(.75rem,5cqi,3rem);max-inline-size:90cqi;text-align:center;text-wrap:balance}@media (min-width: 960px){.links[data-astro-cid-yidrqaxb]{--max-size: min(100cqi, 2400px);--cols: 20;--rows: 15}.items[data-astro-cid-yidrqaxb]{grid-column:span 12;grid-row:span 15;order:1}.image[data-astro-cid-yidrqaxb]{border-block-end:4px solid transparent;border-inline-start:0;grid-column:span 8;grid-row:span 15;object-position:50% 50%;order:2}}@media (min-width: 1440px){.links[data-astro-cid-yidrqaxb]{--cols: 26;--rows: 15}.items[data-astro-cid-yidrqaxb]{grid-column:span 12;grid-row:span 15;order:1}.image[data-astro-cid-yidrqaxb]{grid-column:span 14;grid-row:span 15;order:2}}
-</style></head> <body data-astro-cid-5z7xtygo=""> <main data-astro-cid-5z7xtygo="">  <header data-astro-cid-hpnw4vwy=""> <h1 data-astro-cid-hpnw4vwy="true"> <span class="name" data-astro-cid-hpnw4vwy="">Jason Lengstorf</span> <span class="tagline" data-astro-cid-hpnw4vwy="">makes tv for developers with his friends</span> </h1> <nav data-astro-cid-hpnw4vwy=""> <a href="/" class="active" data-astro-cid-hpnw4vwy="">Home</a> <a href="/blog" data-astro-cid-hpnw4vwy="">Blog</a> <a href="/uses" data-astro-cid-hpnw4vwy="">Stuff I Use</a> <a href="https://partners.codetv.dev" data-astro-cid-hpnw4vwy="">Work With Me</a> </nav> </header>  <section data-astro-cid-zfotlb7l=""> <div class="img" data-astro-cid-zfotlb7l=""> <img alt="Jason Lengstorf wearing a shirt that reads, Free People Read Freely" loading="eager" data-astro-cid-zfotlb7l="true" decoding="async" sizes="(min-width: 1200px) 1200px, 100vw" style="object-fit:cover;background-image:url(data:image/bmp;base64,Qk32BAAAAAAAADYAAAAoAAAACAAAAAgAAAABABgAAAAAAMAAAAATCwAAEwsAAAAAAAAAAAAAOTwvOj02PD9CPT9JOTtIMjU+KCwtHyMYaWplZGViWFlaSUtSP0FNQEJKRkhJS01IiouJg4SCcXJyWVtfSkxWTlBZXV9hamtnnp+dl5iWhIWEa2xvWFpiW11lbm9yf4B8paWloKCfkZKQe3x9Z2hvZWZweHh8i4yJoaKioKCgmJmXiImJdHV7bG13fH2BkZKOm5ycnJ2dnJyakZGRfH2DcHF7fX6Ck5SQmJiZmpubnZ2blJSUf4CGcXJ8fX6Ck5SQ);background-size:cover;background-repeat:no-repeat;max-width:1200px;max-height:1200px;aspect-ratio:1;width:100%" srcset="images/jason-lengstorf-bio_1.jpg 640w, images/jason-lengstorf-bio_2.jpg 750w, images/jason-lengstorf-bio_6.jpg 828w, images/jason-lengstorf-bio_7.jpg 960w, images/jason-lengstorf-bio_8.jpg 1080w, images/jason-lengstorf-bio.jpg 1200w, images/jason-lengstorf-bio_4.jpg 1280w, images/jason-lengstorf-bio_10.jpg 1668w, images/jason-lengstorf-bio_9.jpg 1920w, images/jason-lengstorf-bio_5.jpg 2048w, images/jason-lengstorf-bio_3.jpg 2400w" src="images/jason-lengstorf-bio.jpg"> </div> <div class="text" data-astro-cid-zfotlb7l=""> <fieldset data-astro-cid-zfotlb7l=""> <legend data-astro-cid-zfotlb7l="">About Jason Lengstorf</legend> <label data-astro-cid-zfotlb7l="">
-Shorter-er
-<input type="radio" name="bio-length" value="shorterer" data-astro-cid-zfotlb7l=""> </label> <label data-astro-cid-zfotlb7l="">
-Shorter
-<input type="radio" name="bio-length" value="shorter" data-astro-cid-zfotlb7l=""> </label> <label data-astro-cid-zfotlb7l="">
-Short
-<input type="radio" name="bio-length" value="short" data-astro-cid-zfotlb7l=""> </label> <label data-astro-cid-zfotlb7l="">
-Long
-<input type="radio" name="bio-length" value="long" checked="" data-astro-cid-zfotlb7l=""> </label> <label data-astro-cid-zfotlb7l="">
-Longer
-<input type="radio" name="bio-length" value="longer" data-astro-cid-zfotlb7l=""> </label> <label data-astro-cid-zfotlb7l="">
-Longer-er
-<input type="radio" name="bio-length" value="longerer" data-astro-cid-zfotlb7l=""> </label> </fieldset> <div class="bio" data-astro-cid-zfotlb7l=""> <p data-astro-cid-zfotlb7l=""> <span data-length="1" data-astro-cid-zfotlb7l="">Jason Lengstorf makes tv for developers at <a href="https://codetv.dev" data-astro-cid-zfotlb7l="">CodeTV</a>.<span data-length="2" data-astro-cid-zfotlb7l="">
-He’s been building for the web since the early 2000s<span data-length="3" data-astro-cid-zfotlb7l="">, working jobs ranging from freelancer to agency owner to
-							frontend architect at megacorps to startup VP</span>.</span></span> <span data-length="3" data-astro-cid-zfotlb7l=""><br data-astro-cid-zfotlb7l=""><br data-astro-cid-zfotlb7l=""></span><span data-length="6" data-astro-cid-zfotlb7l="">A lifelong educator and performer,
-</span><span data-length="3" data-astro-cid-zfotlb7l="">Jason believes that the best way to learn and grow a healthy career
-					is through playful exploration, active community, and sharing stories.</span><span data-length="4" data-astro-cid-zfotlb7l="">
-He taps into his broad background <span data-length="5" data-astro-cid-zfotlb7l="">as a touring musician, designer, cook, leader, and engineer
-</span>to put together<span data-length="6" data-astro-cid-zfotlb7l="">
-creative, engaging, and unique experiences that blend video, web,
-						and in-person interaction into</span> creative production that’s good for the community and good for business.</span> </p> </div> </div> </section>  <section class="links" data-astro-cid-yidrqaxb=""> <nav class="items" data-astro-cid-yidrqaxb=""> <a href="https://codetv.dev" class="item lg xs-expander xs-short" data-astro-cid-yidrqaxb=""> <span class="shrinky" data-astro-cid-yidrqaxb=""> This is my company: </span> <img alt="CodeTV — tv for developers" class="codetv-logo" data-astro-cid-yidrqaxb="true" loading="lazy" decoding="async" sizes="(min-width: 435px) 435px, 100vw" style="object-fit:cover;max-width:435px;max-height:164px;aspect-ratio:2.652439024390244;width:100%" srcset="images/codetv-lockup.png 435w, images/codetv-lockup_2.png 640w, images/codetv-lockup_1.png 750w, images/codetv-lockup_4.png 828w, images/codetv-lockup_3.png 870w" src="images/codetv-lockup.png"> <span class="fake-btn" data-astro-cid-yidrqaxb=""> Watch a show � </span> </a> <a href="https://partners.codetv.dev" class="item lg xs-expander" data-astro-cid-yidrqaxb=""> <span class="shrinky" data-astro-cid-yidrqaxb=""> I've worked with companies including: </span> <img alt="Google, Figma, AWS, GitHub, Clerk, Convex, Algolia, Neon, DataStax, CodePen" class="logos" data-astro-cid-yidrqaxb="true" loading="lazy" decoding="async" sizes="(min-width: 435px) 435px, 100vw" style="object-fit:cover;max-width:435px;max-height:164px;aspect-ratio:2.652439024390244;width:100%" srcset="images/codetv-worked-with-logos-sm.png 435w, images/codetv-worked-with-logos-sm_4.png 640w, images/codetv-worked-with-logos-sm_3.png 750w, images/codetv-worked-with-logos-sm_2.png 828w, images/codetv-worked-with-logos-sm_1.png 870w" src="images/codetv-worked-with-logos-sm.png"> <span class="fake-btn" data-astro-cid-yidrqaxb=""> Learn how I can help � </span> </a> <a href="https://codetv.link/lh" class="item md" data-astro-cid-yidrqaxb=""> <img alt="Leet Heat" data-astro-cid-yidrqaxb="true" loading="lazy" decoding="async" sizes="(min-width: 215px) 215px, 100vw" style="object-fit:cover;max-width:215px;max-height:201px;aspect-ratio:1.0696517412935322;width:100%" srcset="images/leet-heat-lockup.png 215w, images/leet-heat-lockup_1.png 430w" src="images/leet-heat-lockup.png"> </a> <a href="https://codetv.link/wdc" class="item md" data-astro-cid-yidrqaxb=""> <img alt="Web Dev Challenge" data-astro-cid-yidrqaxb="true" loading="lazy" decoding="async" sizes="(min-width: 217px) 217px, 100vw" style="object-fit:cover;max-width:217px;max-height:222px;aspect-ratio:0.9774774774774775;width:100%" srcset="images/web-dev-challenge-lockup.png 217w, images/web-dev-challenge-lockup_1.png 434w" src="images/web-dev-challenge-lockup.png"> </a> <a href="https://codetv.link/lwj" class="item md" data-astro-cid-yidrqaxb=""> <img alt="Learn With Jason" data-astro-cid-yidrqaxb="true" loading="lazy" decoding="async" sizes="(min-width: 215px) 215px, 100vw" style="object-fit:cover;max-width:215px;max-height:95px;aspect-ratio:2.263157894736842;width:100%" srcset="images/learn-with-jason-lockup.png 215w, images/learn-with-jason-lockup_1.png 430w" src="images/learn-with-jason-lockup.png"> </a> <a href="https://codetv.link/discord" class="item lg span-2" data-astro-cid-yidrqaxb=""> <img alt="Join the CodeTV Discord" data-astro-cid-yidrqaxb="true" loading="lazy" decoding="async" sizes="(min-width: 326px) 326px, 100vw" style="object-fit:cover;max-width:326px;max-height:72px;aspect-ratio:4.527777777777778;width:100%" srcset="images/codetv-discord.png 326w, images/codetv-discord_2.png 640w, images/codetv-discord_1.png 652w" src="images/codetv-discord.png"> </a> <a href="/blog" class="item lg span-2" data-astro-cid-yidrqaxb=""> <img alt="Read Jason's Blog" data-astro-cid-yidrqaxb="true" loading="lazy" decoding="async" sizes="(min-width: 326px) 326px, 100vw" style="object-fit:cover;max-width:326px;max-height:72px;aspect-ratio:4.527777777777778;width:100%" srcset="images/jason-blog.png 326w, images/jason-blog_2.png 640w, images/jason-blog_1.png 652w" src="images/jason-blog.png"> </a> <a href="https://bsky.app/profile/jason.energy" class="item sm social" rel="nofollow" data-astro-cid-yidrqaxb=""> <img alt="" data-astro-cid-yidrqaxb="true" loading="lazy" decoding="async" role="presentation" sizes="(min-width: 60px) 60px, 100vw" style="object-fit:cover;max-width:60px;max-height:60px;aspect-ratio:1;width:100%" srcset="images/bluesky.png 60w, images/bluesky_1.png 120w" src="images/bluesky.png"> <span data-astro-cid-yidrqaxb="">Bluesky</span> </a> <a href="https://youtube.com/@codetv-dev" class="item sm social" rel="nofollow" data-astro-cid-yidrqaxb=""> <img alt="" data-astro-cid-yidrqaxb="true" loading="lazy" decoding="async" role="presentation" sizes="(min-width: 60px) 60px, 100vw" style="object-fit:cover;max-width:60px;max-height:60px;aspect-ratio:1;width:100%" srcset="images/youtube.png 60w, images/youtube_1.png 120w" src="images/youtube.png"> <span data-astro-cid-yidrqaxb="">YouTube</span> </a> <a href="https://linkedin.com/in/jlengstorf" class="item sm social" rel="nofollow" data-astro-cid-yidrqaxb=""> <img alt="" data-astro-cid-yidrqaxb="true" loading="lazy" decoding="async" role="presentation" sizes="(min-width: 60px) 60px, 100vw" style="object-fit:cover;max-width:60px;max-height:60px;aspect-ratio:1;width:100%" srcset="images/linkedin.png 60w, images/linkedin_1.png 120w" src="images/linkedin.png"> <span data-astro-cid-yidrqaxb="">LinkedIn</span> </a> <a href="https://instagram.com/jlengstorf" class="item sm social" rel="nofollow" data-astro-cid-yidrqaxb=""> <img alt="" data-astro-cid-yidrqaxb="true" loading="lazy" decoding="async" role="presentation" sizes="(min-width: 60px) 60px, 100vw" style="object-fit:cover;max-width:60px;max-height:60px;aspect-ratio:1;width:100%" srcset="images/instagram.png 60w, images/instagram_1.png 120w" src="images/instagram.png"> <span data-astro-cid-yidrqaxb="">Instagram</span> </a> </nav> <figure class="image" data-astro-cid-yidrqaxb=""> <img alt="Jason Lengstorf looking up and to his right while smiling in a way that looks like someone caught him off-guard with a good joke" data-astro-cid-yidrqaxb="true" loading="lazy" decoding="async" sizes="(min-width: 1300px) 1300px, 100vw" style="object-fit:cover;background-image:url(data:image/bmp;base64,Qk32BAAAAAAAADYAAAAoAAAACAAAAAgAAAABABgAAAAAAMAAAAATCwAAEwsAAAAAAAAAAAAAMkxjOE9gRFNaS1VWS1FVQUVRMDFCFhcoUF5uVGBsXGVpYmhpYGRqVlhlQURRJSgvZWx3aW52b3R1dHd5cnR8Zmh2T1JfMDQ0bnB4cXN3d3l5fH1/eXuEbW5+VldlNzk2aWpvbG1vc3NyeHh6dXaAamp7VVRjOjYyWVleXV1eZGRhamlraWh0X11xTUlaOC0pQ0RJSElJUlJNWVhaWFdlUU1kQztQNSAfNzk+PT4+SUhDUE9RUU9eSkZePzNLNBkZ);background-size:cover;background-repeat:no-repeat;max-width:1300px;max-height:1300px;aspect-ratio:1;width:100%" srcset="images/jason-lengstorf-codetv-studios-2025_1.jpg 640w, images/jason-lengstorf-codetv-studios-2025_2.jpg 750w, images/jason-lengstorf-codetv-studios-2025_3.jpg 828w, images/jason-lengstorf-codetv-studios-2025_4.jpg 960w, images/jason-lengstorf-codetv-studios-2025_11.jpg 1080w, images/jason-lengstorf-codetv-studios-2025_7.jpg 1280w, images/jason-lengstorf-codetv-studios-2025.jpg 1300w, images/jason-lengstorf-codetv-studios-2025_8.jpg 1668w, images/jason-lengstorf-codetv-studios-2025_5.jpg 1920w, images/jason-lengstorf-codetv-studios-2025_10.jpg 2048w, images/jason-lengstorf-codetv-studios-2025_6.jpg 2560w, images/jason-lengstorf-codetv-studios-2025_9.jpg 2600w" src="images/jason-lengstorf-codetv-studios-2025.jpg"> <figcaption data-astro-cid-yidrqaxb=""> <a href="https://jasonhill.photo" data-astro-cid-yidrqaxb="">Photo by Jason Hill</a> </figcaption> </figure> </section>  <section data-astro-cid-7rv2slgm=""> <ul data-astro-cid-7rv2slgm=""> <li class="info" data-astro-cid-7rv2slgm=""> <h2 data-astro-cid-7rv2slgm="">Media Kit</h2> <p data-astro-cid-7rv2slgm="">
-Any of these photos can be used for speaker photos, and other media.
-				Photographer credit must be included.
-</p> </li> <li data-astro-cid-7rv2slgm=""> <figure class="photo-container" data-src="/v1743826720/jason.energy/v2/219-244A5994.jpg" data-alt="Jason Lengstorf smiling." data-photographer="Solo" data-photographer-site="https://www.instagram.com/_shotsbysolo/" tabindex="0" data-astro-cid-7rv2slgm=""> <img alt="Jason Lengstorf smiling." data-astro-cid-7rv2slgm="true" loading="lazy" decoding="async" sizes="(min-width: 500px) 500px, 100vw" style="object-fit:cover;max-width:500px;max-height:500px;aspect-ratio:1;width:100%" srcset="images/219-244A5994.jpg 500w, images/219-244A5994_2.jpg 640w, images/219-244A5994_3.jpg 750w, images/219-244A5994_1.jpg 828w, images/219-244A5994_4.jpg 960w, images/219-244A5994_5.jpg 1000w" src="images/219-244A5994.jpg"> <figcaption data-astro-cid-7rv2slgm=""> <p data-astro-cid-7rv2slgm="">click for download options and details</p> </figcaption> </figure> </li><li data-astro-cid-7rv2slgm=""> <figure class="photo-container" data-src="/v1743826151/jason.energy/v2/jason-lengstorf-jh-color-03.jpg" data-alt="Jason Lengstorf on a colored background, looking off to his left" data-photographer="Jason Hill" data-photographer-site="https://jasonhillphoto.com" tabindex="0" data-astro-cid-7rv2slgm=""> <img alt="Jason Lengstorf on a colored background, looking off to his left" data-astro-cid-7rv2slgm="true" loading="lazy" decoding="async" sizes="(min-width: 500px) 500px, 100vw" style="object-fit:cover;max-width:500px;max-height:500px;aspect-ratio:1;width:100%" srcset="images/jason-lengstorf-jh-color-03.jpg 500w, images/jason-lengstorf-jh-color-03_1.jpg 640w, images/jason-lengstorf-jh-color-03_3.jpg 750w, images/jason-lengstorf-jh-color-03_4.jpg 828w, images/jason-lengstorf-jh-color-03_2.jpg 960w, images/jason-lengstorf-jh-color-03_5.jpg 1000w" src="images/jason-lengstorf-jh-color-03.jpg"> <figcaption data-astro-cid-7rv2slgm=""> <p data-astro-cid-7rv2slgm="">click for download options and details</p> </figcaption> </figure> </li><li data-astro-cid-7rv2slgm=""> <figure class="photo-container" data-src="/v1743824433/jason.energy/v2/jason-lengstorf-jh-headshot-03.jpg" data-alt="Jason Lengstorf sitting at a table with a hand to his head. It looks moody, like maybe he’s a tough guy. (He’s not.)" data-photographer="Jason Hill" data-photographer-site="https://jasonhillphoto.com" tabindex="0" data-astro-cid-7rv2slgm=""> <img alt="Jason Lengstorf sitting at a table with a hand to his head. It looks moody, like maybe he’s a tough guy. (He’s not.)" data-astro-cid-7rv2slgm="true" loading="lazy" decoding="async" sizes="(min-width: 500px) 500px, 100vw" style="object-fit:cover;max-width:500px;max-height:500px;aspect-ratio:1;width:100%" srcset="images/jason-lengstorf-jh-headshot-03.jpg 500w, images/jason-lengstorf-jh-headshot-03_4.jpg 640w, images/jason-lengstorf-jh-headshot-03_3.jpg 750w, images/jason-lengstorf-jh-headshot-03_5.jpg 828w, images/jason-lengstorf-jh-headshot-03_1.jpg 960w, images/jason-lengstorf-jh-headshot-03_2.jpg 1000w" src="images/jason-lengstorf-jh-headshot-03.jpg"> <figcaption data-astro-cid-7rv2slgm=""> <p data-astro-cid-7rv2slgm="">click for download options and details</p> </figcaption> </figure> </li><li data-astro-cid-7rv2slgm=""> <figure class="photo-container" data-src="/v1743829346/jason.energy/v2/BA1_8208.jpg" data-alt="Jason Lengstorf on the set of Web Dev Challenge." data-photographer="Jason Hill" data-photographer-site="https://jasonhillphoto.com" tabindex="0" data-astro-cid-7rv2slgm=""> <img alt="Jason Lengstorf on the set of Web Dev Challenge." data-astro-cid-7rv2slgm="true" loading="lazy" decoding="async" sizes="(min-width: 500px) 500px, 100vw" style="object-fit:cover;max-width:500px;max-height:500px;aspect-ratio:1;width:100%" srcset="images/BA1_8208.jpg 500w, images/BA1_8208_2.jpg 640w, images/BA1_8208_5.jpg 750w, images/BA1_8208_3.jpg 828w, images/BA1_8208_1.jpg 960w, images/BA1_8208_4.jpg 1000w" src="images/BA1_8208.jpg"> <figcaption data-astro-cid-7rv2slgm=""> <p data-astro-cid-7rv2slgm="">click for download options and details</p> </figcaption> </figure> </li><li data-astro-cid-7rv2slgm=""> <figure class="photo-container" data-src="/v1743826157/jason.energy/v2/jason-lengstorf-jh-headshot-01.jpg" data-alt="Jason Lengstorf reaching up toward his hat, looking directly into the camera." data-photographer="Jason Hill" data-photographer-site="https://jasonhillphoto.com" tabindex="0" data-astro-cid-7rv2slgm=""> <img alt="Jason Lengstorf reaching up toward his hat, looking directly into the camera." data-astro-cid-7rv2slgm="true" loading="lazy" decoding="async" sizes="(min-width: 500px) 500px, 100vw" style="object-fit:cover;max-width:500px;max-height:500px;aspect-ratio:1;width:100%" srcset="images/jason-lengstorf-jh-headshot-01.jpg 500w, images/jason-lengstorf-jh-headshot-01_5.jpg 640w, images/jason-lengstorf-jh-headshot-01_4.jpg 750w, images/jason-lengstorf-jh-headshot-01_1.jpg 828w, images/jason-lengstorf-jh-headshot-01_3.jpg 960w, images/jason-lengstorf-jh-headshot-01_2.jpg 1000w" src="images/jason-lengstorf-jh-headshot-01.jpg"> <figcaption data-astro-cid-7rv2slgm=""> <p data-astro-cid-7rv2slgm="">click for download options and details</p> </figcaption> </figure> </li><li data-astro-cid-7rv2slgm=""> <figure class="photo-container" data-src="/v1743826166/jason.energy/v2/20220225_Jason_Lengstorf_Headshot_0568.jpg" data-alt="Jason Lengstorf smiling and standing in front of an alley." data-photographer="Amaren Colosi" data-photographer-site="https://www.amarencolosi.work" tabindex="0" data-astro-cid-7rv2slgm=""> <img alt="Jason Lengstorf smiling and standing in front of an alley." data-astro-cid-7rv2slgm="true" loading="lazy" decoding="async" sizes="(min-width: 500px) 500px, 100vw" style="object-fit:cover;max-width:500px;max-height:500px;aspect-ratio:1;width:100%" srcset="images/20220225_Jason_Lengstorf_Headshot_0568.jpg 500w, images/20220225_Jason_Lengstorf_Headshot_0568_4.jpg 640w, images/20220225_Jason_Lengstorf_Headshot_0568_2.jpg 750w, images/20220225_Jason_Lengstorf_Headshot_0568_3.jpg 828w, images/20220225_Jason_Lengstorf_Headshot_0568_1.jpg 960w, images/20220225_Jason_Lengstorf_Headshot_0568_5.jpg 1000w" src="images/20220225_Jason_Lengstorf_Headshot_0568.jpg"> <figcaption data-astro-cid-7rv2slgm=""> <p data-astro-cid-7rv2slgm="">click for download options and details</p> </figcaption> </figure> </li><li data-astro-cid-7rv2slgm=""> <figure class="photo-container" data-src="/v1743829538/jason.energy/v2/BA1_7775_1.jpg" data-alt="Jason Lengstorf on the set of Web Dev Challenge." data-photographer="Jason Hill" data-photographer-site="https://jasonhillphoto.com" tabindex="0" data-astro-cid-7rv2slgm=""> <img alt="Jason Lengstorf on the set of Web Dev Challenge." data-astro-cid-7rv2slgm="true" loading="lazy" decoding="async" sizes="(min-width: 500px) 500px, 100vw" style="object-fit:cover;max-width:500px;max-height:500px;aspect-ratio:1;width:100%" srcset="images/BA1_7775_1.jpg 500w, images/BA1_7775_1_4.jpg 640w, images/BA1_7775_1_2.jpg 750w, images/BA1_7775_1_5.jpg 828w, images/BA1_7775_1_1.jpg 960w, images/BA1_7775_1_3.jpg 1000w" src="images/BA1_7775_1.jpg"> <figcaption data-astro-cid-7rv2slgm=""> <p data-astro-cid-7rv2slgm="">click for download options and details</p> </figcaption> </figure> </li><li data-astro-cid-7rv2slgm=""> <figure class="photo-container" data-src="/v1743823540/jason.energy/v2/jason-lengstorf-wdc-s2e1-jasonhill.jpg" data-alt="Jason Lengstorf on the set of Web Dev Challenge" data-photographer="Jason Hill" data-photographer-site="https://jasonhillphoto.com" tabindex="0" data-astro-cid-7rv2slgm=""> <img alt="Jason Lengstorf on the set of Web Dev Challenge" data-astro-cid-7rv2slgm="true" loading="lazy" decoding="async" sizes="(min-width: 500px) 500px, 100vw" style="object-fit:cover;max-width:500px;max-height:500px;aspect-ratio:1;width:100%" srcset="images/jason-lengstorf-wdc-s2e1-jasonhill.jpg 500w, images/jason-lengstorf-wdc-s2e1-jasonhill_2.jpg 640w, images/jason-lengstorf-wdc-s2e1-jasonhill_4.jpg 750w, images/jason-lengstorf-wdc-s2e1-jasonhill_3.jpg 828w, images/jason-lengstorf-wdc-s2e1-jasonhill_5.jpg 960w, images/jason-lengstorf-wdc-s2e1-jasonhill_1.jpg 1000w" src="images/jason-lengstorf-wdc-s2e1-jasonhill.jpg"> <figcaption data-astro-cid-7rv2slgm=""> <p data-astro-cid-7rv2slgm="">click for download options and details</p> </figcaption> </figure> </li><li data-astro-cid-7rv2slgm=""> <figure class="photo-container" data-src="/v1743829790/jason.energy/v2/jason-lengstorf-jh-color-01.jpg" data-alt="Jason Lengstorf on a brightly colored background looking severe." data-photographer="Jason Hill" data-photographer-site="https://jasonhillphoto.com" tabindex="0" data-astro-cid-7rv2slgm=""> <img alt="Jason Lengstorf on a brightly colored background looking severe." data-astro-cid-7rv2slgm="true" loading="lazy" decoding="async" sizes="(min-width: 500px) 500px, 100vw" style="object-fit:cover;max-width:500px;max-height:500px;aspect-ratio:1;width:100%" srcset="images/jason-lengstorf-jh-color-01.jpg 500w, images/jason-lengstorf-jh-color-01_1.jpg 640w, images/jason-lengstorf-jh-color-01_2.jpg 750w, images/jason-lengstorf-jh-color-01_5.jpg 828w, images/jason-lengstorf-jh-color-01_3.jpg 960w, images/jason-lengstorf-jh-color-01_4.jpg 1000w" src="images/jason-lengstorf-jh-color-01.jpg"> <figcaption data-astro-cid-7rv2slgm=""> <p data-astro-cid-7rv2slgm="">click for download options and details</p> </figcaption> </figure> </li><li data-astro-cid-7rv2slgm=""> <figure class="photo-container" data-src="/v1743828769/jason.energy/v2/BA1_4558.jpg" data-alt="Jason Lengstorf holding hot sauce bottles in front of the Leet Heat logo" data-photographer="Jason Hill" data-photographer-site="https://jasonhillphoto.com" tabindex="0" data-astro-cid-7rv2slgm=""> <img alt="Jason Lengstorf holding hot sauce bottles in front of the Leet Heat logo" data-astro-cid-7rv2slgm="true" loading="lazy" decoding="async" sizes="(min-width: 500px) 500px, 100vw" style="object-fit:cover;max-width:500px;max-height:500px;aspect-ratio:1;width:100%" srcset="images/BA1_4558.jpg 500w, images/BA1_4558_2.jpg 640w, images/BA1_4558_5.jpg 750w, images/BA1_4558_4.jpg 828w, images/BA1_4558_1.jpg 960w, images/BA1_4558_3.jpg 1000w" src="images/BA1_4558.jpg"> <figcaption data-astro-cid-7rv2slgm=""> <p data-astro-cid-7rv2slgm="">click for download options and details</p> </figcaption> </figure> </li><li data-astro-cid-7rv2slgm=""> <figure class="photo-container" data-src="/v1743828106/jason.energy/v2/jason-lengstorf-jh-linen-02.jpg" data-alt="Jason Lengstorf wearing a light colored linen outfit on a dark background." data-photographer="Jason Hill" data-photographer-site="https://jasonhillphoto.com" tabindex="0" data-astro-cid-7rv2slgm=""> <img alt="Jason Lengstorf wearing a light colored linen outfit on a dark background." data-astro-cid-7rv2slgm="true" loading="lazy" decoding="async" sizes="(min-width: 500px) 500px, 100vw" style="object-fit:cover;max-width:500px;max-height:500px;aspect-ratio:1;width:100%" srcset="images/jason-lengstorf-jh-linen-02.jpg 500w, images/jason-lengstorf-jh-linen-02_2.jpg 640w, images/jason-lengstorf-jh-linen-02_4.jpg 750w, images/jason-lengstorf-jh-linen-02_5.jpg 828w, images/jason-lengstorf-jh-linen-02_3.jpg 960w, images/jason-lengstorf-jh-linen-02_1.jpg 1000w" src="images/jason-lengstorf-jh-linen-02.jpg"> <figcaption data-astro-cid-7rv2slgm=""> <p data-astro-cid-7rv2slgm="">click for download options and details</p> </figcaption> </figure> </li><li data-astro-cid-7rv2slgm=""> <figure class="photo-container" data-src="/v1743880312/jason.energy/v2/DSC00027.jpg" data-alt="Jason Lengstorf in a hat with pink trim wearing a hoodie with bright colored accents, in front of a background that has multi-colored lights shining on it." data-photographer="Jason Lengstorf" data-photographer-site="https://jason.energy" tabindex="0" data-astro-cid-7rv2slgm=""> <img alt="Jason Lengstorf in a hat with pink trim wearing a hoodie with bright colored accents, in front of a background that has multi-colored lights shining on it." data-astro-cid-7rv2slgm="true" loading="lazy" decoding="async" sizes="(min-width: 500px) 500px, 100vw" style="object-fit:cover;max-width:500px;max-height:500px;aspect-ratio:1;width:100%" srcset="images/DSC00027.jpg 500w, images/DSC00027_5.jpg 640w, images/DSC00027_3.jpg 750w, images/DSC00027_1.jpg 828w, images/DSC00027_4.jpg 960w, images/DSC00027_2.jpg 1000w" src="images/DSC00027.jpg"> <figcaption data-astro-cid-7rv2slgm=""> <p data-astro-cid-7rv2slgm="">click for download options and details</p> </figcaption> </figure> </li> </ul> </section> <dialog id="media" popover="" data-astro-cid-7rv2slgm=""> <button id="close-modal" data-astro-cid-7rv2slgm="">� close</button> <img src="" alt="" class="preview" data-astro-cid-7rv2slgm=""> <div class="options" data-astro-cid-7rv2slgm=""> <a href="#" class="thumb" data-astro-cid-7rv2slgm="">thumbnail crop</a> <a href="#" class="web" data-astro-cid-7rv2slgm="">web resolution</a> <a href="#" class="full" data-astro-cid-7rv2slgm="">full resolution</a> <a href="" class="photographer" data-astro-cid-7rv2slgm=""> Photo by </a> </div> </dialog> <script type="module">const m=document.querySelectorAll(".photo-container"),e=document.querySelector("#media"),n=document.querySelector("#close-modal"),r="https://res.cloudinary.com/jlengstorf/image/upload",b="/f_auto/q_auto/w_1200,c_fill,g_face",_="/f_auto/q_auto/ar_1,w_400,c_thumb,g_face",g="/f_auto/q_auto/w_1600",u=()=>{const t=e.querySelector(".preview");t.src="",e.close()};n?.addEventListener("click",u);n?.addEventListener("keypress",u);m.forEach(t=>{const o=t.dataset?.src,l=t.dataset?.alt,i=t.dataset?.photographer,h=t.dataset?.photographerSite,s=()=>{const c=e.querySelector(".preview"),p=e.querySelector(".thumb"),d=e.querySelector(".web"),f=e.querySelector(".full"),a=e.querySelector(".photographer");c.setAttribute("src",r+b+o),c.setAttribute("alt",l??""),p.setAttribute("href",r+_+o),d.setAttribute("href",r+g+o),f.setAttribute("href",r+o),a.setAttribute("href",h??""),a.textContent=`photo: ${i}`,e.showModal()};t.addEventListener("click",s),t.addEventListener("keypress",s)});</script>   <footer data-astro-cid-k2f5zb5c=""> <div data-astro-cid-k2f5zb5c=""> <p data-astro-cid-k2f5zb5c="">© <a href="https://jason.energy" rel="home" data-astro-cid-k2f5zb5c="">Jason Lengstorf</a></p> <p data-astro-cid-k2f5zb5c="">I’m nicer than I look, I swear.</p> <p data-astro-cid-k2f5zb5c="">
-Don’t let my <abbr title="Resting Murder Face" data-astro-cid-k2f5zb5c="">RMF</abbr> fool you; there’s
-			no murder in my heart.
-</p> </div> <div data-astro-cid-k2f5zb5c=""> <ul data-astro-cid-k2f5zb5c=""> <li data-astro-cid-k2f5zb5c=""> <a href="https://partners.codetv.dev" data-astro-cid-k2f5zb5c="">work with me</a> </li> <li data-astro-cid-k2f5zb5c=""> <a href="https://jason.energy/uses" data-astro-cid-k2f5zb5c="">stuff I use</a> </li> <li data-astro-cid-k2f5zb5c=""> <a href="mailto:jason@codetv.dev" data-astro-cid-k2f5zb5c="">jason@codetv.dev</a> </li> </ul> </div> </footer>   </main>  
+      <a href="https://partners.codetv.dev" class="item lg xs-expander" data-astro-cid-yidrqaxb="">
+        <span class="shrinky" data-astro-cid-yidrqaxb=""> I've worked with companies including: </span>
+        <img alt="Google, Figma, AWS, GitHub, Clerk, Convex, Algolia, Neon, DataStax, CodePen" class="logos" data-astro-cid-yidrqaxb="true"
+             loading="lazy" decoding="async"
+             sizes="(min-width: 435px) 435px, 100vw"
+             style="object-fit:cover;max-width:435px;max-height:164px;aspect-ratio:2.652439024390244;width:100%"
+             srcset="images/codetv-worked-with-logos-sm.png 435w, images/codetv-worked-with-logos-sm_4.png 640w, images/codetv-worked-with-logos-sm_3.png 750w, images/codetv-worked-with-logos-sm_2.png 828w, images/codetv-worked-with-logos-sm_1.png 870w"
+             src="images/codetv-worked-with-logos-sm.png">
+        <span class="fake-btn" data-astro-cid-yidrqaxb=""> Learn how I can help � </span>
+      </a>
+
+      <a href="https://codetv.link/lh" class="item md" data-astro-cid-yidrqaxb="">
+        <img alt="Leet Heat" data-astro-cid-yidrqaxb="true" loading="lazy" decoding="async"
+             sizes="(min-width: 215px) 215px, 100vw"
+             style="object-fit:cover;max-width:215px;max-height:201px;aspect-ratio:1.0696517412935322;width:100%"
+             srcset="images/leet-heat-lockup.png 215w, images/leet-heat-lockup_1.png 430w"
+             src="images/leet-heat-lockup.png">
+      </a>
+
+      <a href="https://codetv.link/wdc" class="item md" data-astro-cid-yidrqaxb="">
+        <img alt="Web Dev Challenge" data-astro-cid-yidrqaxb="true" loading="lazy" decoding="async"
+             sizes="(min-width: 217px) 217px, 100vw"
+             style="object-fit:cover;max-width:217px;max-height:222px;aspect-ratio:0.9774774774774775;width:100%"
+             srcset="images/web-dev-challenge-lockup.png 217w, images/web-dev-challenge-lockup_1.png 434w"
+             src="images/web-dev-challenge-lockup.png">
+      </a>
+
+      <a href="https://codetv.link/lwj" class="item md" data-astro-cid-yidrqaxb="">
+        <img alt="Learn With Jason" data-astro-cid-yidrqaxb="true" loading="lazy" decoding="async"
+             sizes="(min-width: 215px) 215px, 100vw"
+             style="object-fit:cover;max-width:215px;max-height:95px;aspect-ratio:2.263157894736842;width:100%"
+             srcset="images/learn-with-jason-lockup.png 215w, images/learn-with-jason-lockup_1.png 430w"
+             src="images/learn-with-jason-lockup.png">
+      </a>
+
+      <a href="https://codetv.link/discord" class="item lg span-2" data-astro-cid-yidrqaxb="">
+        <img alt="Join the CodeTV Discord" data-astro-cid-yidrqaxb="true" loading="lazy" decoding="async"
+             sizes="(min-width: 326px) 326px, 100vw"
+             style="object-fit:cover;max-width:326px;max-height:72px;aspect-ratio:4.527777777777778;width:100%"
+             srcset="images/codetv-discord.png 326w, images/codetv-discord_2.png 640w, images/codetv-discord_1.png 652w"
+             src="images/codetv-discord.png">
+      </a>
+
+      <a href="/blog" class="item lg span-2" data-astro-cid-yidrqaxb="">
+        <img alt="Read Jason's Blog" data-astro-cid-yidrqaxb="true" loading="lazy" decoding="async"
+             sizes="(min-width: 326px) 326px, 100vw"
+             style="object-fit:cover;max-width:326px;max-height:72px;aspect-ratio:4.527777777777778;width:100%"
+             srcset="images/jason-blog.png 326w, images/jason-blog_2.png 640w, images/jason-blog_1.png 652w"
+             src="images/jason-blog.png">
+      </a>
+
+      <a href="https://bsky.app/profile/jason.energy" class="item sm social" rel="nofollow" data-astro-cid-yidrqaxb="">
+        <img alt="" data-astro-cid-yidrqaxb="true" loading="lazy" decoding="async" role="presentation"
+             sizes="(min-width: 60px) 60px, 100vw"
+             style="object-fit:cover;max-width:60px;max-height:60px;aspect-ratio:1;width:100%"
+             srcset="images/bluesky.png 60w, images/bluesky_1.png 120w" src="images/bluesky.png">
+        <span data-astro-cid-yidrqaxb="">Bluesky</span>
+      </a>
+
+      <a href="https://youtube.com/@codetv-dev" class="item sm social" rel="nofollow" data-astro-cid-yidrqaxb="">
+        <img alt="" data-astro-cid-yidrqaxb="true" loading="lazy" decoding="async" role="presentation"
+             sizes="(min-width: 60px) 60px, 100vw"
+             style="object-fit:cover;max-width:60px;max-height:60px;aspect-ratio:1;width:100%"
+             srcset="images/youtube.png 60w, images/youtube_1.png 120w" src="images/youtube.png">
+        <span data-astro-cid-yidrqaxb="">YouTube</span>
+      </a>
+
+      <a href="https://linkedin.com/in/jlengstorf" class="item sm social" rel="nofollow" data-astro-cid-yidrqaxb="">
+        <img alt="" data-astro-cid-yidrqaxb="true" loading="lazy" decoding="async" role="presentation"
+             sizes="(min-width: 60px) 60px, 100vw"
+             style="object-fit:cover;max-width:60px;max-height:60px;aspect-ratio:1;width:100%"
+             srcset="images/linkedin.png 60w, images/linkedin_1.png 120w" src="images/linkedin.png">
+        <span data-astro-cid-yidrqaxb="">LinkedIn</span>
+      </a>
+
+      <a href="https://instagram.com/jlengstorf" class="item sm social" rel="nofollow" data-astro-cid-yidrqaxb="">
+        <img alt="" data-astro-cid-yidrqaxb="true" loading="lazy" decoding="async" role="presentation"
+             sizes="(min-width: 60px) 60px, 100vw"
+             style="object-fit:cover;max-width:60px;max-height:60px;aspect-ratio:1;width:100%"
+             srcset="images/instagram.png 60w, images/instagram_1.png 120w" src="images/instagram.png">
+        <span data-astro-cid-yidrqaxb="">Instagram</span>
+      </a>
+    </nav>
+
+    <figure class="image" data-astro-cid-yidrqaxb="">
+      <img alt="Jason Lengstorf looking up and to his right while smiling in a way that looks like someone caught him off-guard with a good joke"
+           data-astro-cid-yidrqaxb="true" loading="lazy" decoding="async"
+           sizes="(min-width: 1300px) 1300px, 100vw"
+           style="object-fit:cover;background-image:url(data:image/bmp;base64,Qk32BAAAAAAAADYAAAAoAAAACAAAAAgAAAABABgAAAAAAMAAAAATCwAAEwsAAAAAAAAAAAAAMkxjOE9gRFNaS1VWS1FVQUVRMDFCFhcoUF5uVGBsXGVpYmhpYGRqVlhlQURRJSgvZWx3aW52b3R1dHd5cnR8Zmh2T1JfMDQ0bnB4cXN3d3l5fH1/eXuEbW5+VldlNzk2aWpvbG1vc3NyeHh6dXaAamp7VVRjOjYyWVleXV1eZGRhamlraWh0X11xTUlaOC0pQ0RJSElJUlJNWVhaWFdlUU1kQztQNSAfNzk+PT4+SUhDUE9RUU9eSkZePzNLNBkZ);background-size:cover;background-repeat:no-repeat;max-width:1300px;max-height:1300px;aspect-ratio:1;width:100%"
+           srcset="images/jason-lengstorf-codetv-studios-2025_1.jpg 640w, images/jason-lengstorf-codetv-studios-2025_2.jpg 750w, images/jason-lengstorf-codetv-studios-2025_3.jpg 828w, images/jason-lengstorf-codetv-studios-2025_4.jpg 960w, images/jason-lengstorf-codetv-studios-2025_11.jpg 1080w, images/jason-lengstorf-codetv-studios-2025_7.jpg 1280w, images/jason-lengstorf-codetv-studios-2025.jpg 1300w, images/jason-lengstorf-codetv-studios-2025_8.jpg 1668w, images/jason-lengstorf-codetv-studios-2025_5.jpg 1920w, images/jason-lengstorf-codetv-studios-2025_10.jpg 2048w, images/jason-lengstorf-codetv-studios-2025_6.jpg 2560w, images/jason-lengstorf-codetv-studios-2025_9.jpg 2600w"
+           src="images/jason-lengstorf-codetv-studios-2025.jpg">
+      <figcaption data-astro-cid-yidrqaxb="">
+        <a href="https://jasonhill.photo" data-astro-cid-yidrqaxb="">Photo by Jason Hill</a>
+      </figcaption>
+    </figure>
+  </section>
+
+  <section data-astro-cid-7rv2slgm="">
+    <ul data-astro-cid-7rv2slgm="">
+      <li class="info" data-astro-cid-7rv2slgm="">
+        <h2 data-astro-cid-7rv2slgm="">Media Kit</h2>
+        <p data-astro-cid-7rv2slgm="">
+          Any of these photos can be used for speaker photos, and other media.
+          Photographer credit must be included.
+        </p>
+      </li>
+
+      <li data-astro-cid-7rv2slgm="">
+        <figure class="photo-container" data-src="/v1743826720/jason.energy/v2/219-244A5994.jpg"
+                data-alt="Jason Lengstorf smiling." data-photographer="Solo"
+                data-photographer-site="https://www.instagram.com/_shotsbysolo/" tabindex="0" data-astro-cid-7rv2slgm="">
+          <img alt="Jason Lengstorf smiling." data-astro-cid-7rv2slgm="true" loading="lazy" decoding="async"
+               sizes="(min-width: 500px) 500px, 100vw"
+               style="object-fit:cover;max-width:500px;max-height:500px;aspect-ratio:1;width:100%"
+               srcset="images/219-244A5994.jpg 500w, images/219-244A5994_2.jpg 640w, images/219-244A5994_3.jpg 750w, images/219-244A5994_1.jpg 828w, images/219-244A5994_4.jpg 960w, images/219-244A5994_5.jpg 1000w"
+               src="images/219-244A5994.jpg">
+          <figcaption data-astro-cid-7rv2slgm="">
+            <p data-astro-cid-7rv2slgm="">click for download options and details</p>
+          </figcaption>
+        </figure>
+      </li>
+
+      <li data-astro-cid-7rv2slgm="">
+        <figure class="photo-container" data-src="/v1743826151/jason.energy/v2/jason-lengstorf-jh-color-03.jpg"
+                data-alt="Jason Lengstorf on a colored background, looking off to his left"
+                data-photographer="Jason Hill" data-photographer-site="https://jasonhillphoto.com"
+                tabindex="0" data-astro-cid-7rv2slgm="">
+          <img alt="Jason Lengstorf on a colored background, looking off to his left" data-astro-cid-7rv2slgm="true"
+               loading="lazy" decoding="async" sizes="(min-width: 500px) 500px, 100vw"
+               style="object-fit:cover;max-width:500px;max-height:500px;aspect-ratio:1;width:100%"
+               srcset="images/jason-lengstorf-jh-color-03.jpg 500w, images/jason-lengstorf-jh-color-03_1.jpg 640w, images/jason-lengstorf-jh-color-03_3.jpg 750w, images/jason-lengstorf-jh-color-03_4.jpg 828w, images/jason-lengstorf-jh-color-03_2.jpg 960w, images/jason-lengstorf-jh-color-03_5.jpg 1000w"
+               src="images/jason-lengstorf-jh-color-03.jpg">
+          <figcaption data-astro-cid-7rv2slgm="">
+            <p data-astro-cid-7rv2slgm="">click for download options and details</p>
+          </figcaption>
+        </figure>
+      </li>
+
+      <li data-astro-cid-7rv2slgm="">
+        <figure class="photo-container" data-src="/v1743824433/jason.energy/v2/jason-lengstorf-jh-headshot-03.jpg"
+                data-alt="Jason Lengstorf sitting at a table with a hand to his head. It looks moody, like maybe he’s a tough guy. (He’s not.)"
+                data-photographer="Jason Hill" data-photographer-site="https://jasonhillphoto.com"
+                tabindex="0" data-astro-cid-7rv2slgm="">
+          <img alt="Jason Lengstorf sitting at a table with a hand to his head. It looks moody, like maybe he’s a tough guy. (He’s not.)"
+               data-astro-cid-7rv2slgm="true" loading="lazy" decoding="async"
+               sizes="(min-width: 500px) 500px, 100vw"
+               style="object-fit:cover;max-width:500px;max-height:500px;aspect-ratio:1;width:100%"
+               srcset="images/jason-lengstorf-jh-headshot-03.jpg 500w, images/jason-lengstorf-jh-headshot-03_4.jpg 640w, images/jason-lengstorf-jh-headshot-03_3.jpg 750w, images/jason-lengstorf-jh-headshot-03_5.jpg 828w, images/jason-lengstorf-jh-headshot-03_1.jpg 960w, images/jason-lengstorf-jh-headshot-03_2.jpg 1000w"
+               src="images/jason-lengstorf-jh-headshot-03.jpg">
+          <figcaption data-astro-cid-7rv2slgm="">
+            <p data-astro-cid-7rv2slgm="">click for download options and details</p>
+          </figcaption>
+        </figure>
+      </li>
+
+      <li data-astro-cid-7rv2slgm="">
+        <figure class="photo-container" data-src="/v1743829346/jason.energy/v2/BA1_8208.jpg"
+                data-alt="Jason Lengstorf on the set of Web Dev Challenge."
+                data-photographer="Jason Hill" data-photographer-site="https://jasonhillphoto.com"
+                tabindex="0" data-astro-cid-7rv2slgm="">
+          <img alt="Jason Lengstorf on the set of Web Dev Challenge." data-astro-cid-7rv2slgm="true"
+               loading="lazy" decoding="async" sizes="(min-width: 500px) 500px, 100vw"
+               style="object-fit:cover;max-width:500px;max-height:500px;aspect-ratio:1;width:100%"
+               srcset="images/BA1_8208.jpg 500w, images/BA1_8208_2.jpg 640w, images/BA1_8208_5.jpg 750w, images/BA1_8208_3.jpg 828w, images/BA1_8208_1.jpg 960w, images/BA1_8208_4.jpg 1000w"
+               src="images/BA1_8208.jpg">
+          <figcaption data-astro-cid-7rv2slgm="">
+            <p data-astro-cid-7rv2slgm="">click for download options and details</p>
+          </figcaption>
+        </figure>
+      </li>
+
+      <li data-astro-cid-7rv2slgm="">
+        <figure class="photo-container" data-src="/v1743826157/jason.energy/v2/jason-lengstorf-jh-headshot-01.jpg"
+                data-alt="Jason Lengstorf reaching up toward his hat, looking directly into the camera."
+                data-photographer="Jason Hill" data-photographer-site="https://jasonhillphoto.com"
+                tabindex="0" data-astro-cid-7rv2slgm="">
+          <img alt="Jason Lengstorf reaching up toward his hat, looking directly into the camera." data-astro-cid-7rv2slgm="true"
+               loading="lazy" decoding="async" sizes="(min-width: 500px) 500px, 100vw"
+               style="object-fit:cover;max-width:500px;max-height:500px;aspect-ratio:1;width:100%"
+               srcset="images/jason-lengstorf-jh-headshot-01.jpg 500w, images/jason-lengstorf-jh-headshot-01_5.jpg 640w, images/jason-lengstorf-jh-headshot-01_4.jpg 750w, images/jason-lengstorf-jh-headshot-01_1.jpg 828w, images/jason-lengstorf-jh-headshot-01_3.jpg 960w, images/jason-lengstorf-jh-headshot-01_2.jpg 1000w"
+               src="images/jason-lengstorf-jh-headshot-01.jpg">
+          <figcaption data-astro-cid-7rv2slgm="">
+            <p data-astro-cid-7rv2slgm="">click for download options and details</p>
+          </figcaption>
+        </figure>
+      </li>
+
+      <li data-astro-cid-7rv2slgm="">
+        <figure class="photo-container" data-src="/v1743826166/jason.energy/v2/20220225_Jason_Lengstorf_Headshot_0568.jpg"
+                data-alt="Jason Lengstorf smiling and standing in front of an alley."
+                data-photographer="Amaren Colosi" data-photographer-site="https://www.amarencolosi.work"
+                tabindex="0" data-astro-cid-7rv2slgm="">
+          <img alt="Jason Lengstorf smiling and standing in front of an alley." data-astro-cid-7rv2slgm="true"
+               loading="lazy" decoding="async" sizes="(min-width: 500px) 500px, 100vw"
+               style="object-fit:cover;max-width:500px;max-height:500px;aspect-ratio:1;width:100%"
+               srcset="images/20220225_Jason_Lengstorf_Headshot_0568.jpg 500w, images/20220225_Jason_Lengstorf_Headshot_0568_4.jpg 640w, images/20220225_Jason_Lengstorf_Headshot_0568_2.jpg 750w, images/20220225_Jason_Lengstorf_Headshot_0568_3.jpg 828w, images/20220225_Jason_Lengstorf_Headshot_0568_1.jpg 960w, images/20220225_Jason_Lengstorf_Headshot_0568_5.jpg 1000w"
+               src="images/20220225_Jason_Lengstorf_Headshot_0568.jpg">
+          <figcaption data-astro-cid-7rv2slgm="">
+            <p data-astro-cid-7rv2slgm="">click for download options and details</p>
+          </figcaption>
+        </figure>
+      </li>
+
+      <li data-astro-cid-7rv2slgm="">
+        <figure class="photo-container" data-src="/v1743829538/jason.energy/v2/BA1_7775_1.jpg"
+                data-alt="Jason Lengstorf on the set of Web Dev Challenge."
+                data-photographer="Jason Hill" data-photographer-site="https://jasonhillphoto.com"
+                tabindex="0" data-astro-cid-7rv2slgm="">
+          <img alt="Jason Lengstorf on the set of Web Dev Challenge." data-astro-cid-7rv2slgm="true"
+               loading="lazy" decoding="async" sizes="(min-width: 500px) 500px, 100vw"
+               style="object-fit:cover;max-width:500px;max-height:500px;aspect-ratio:1;width:100%"
+               srcset="images/BA1_7775_1.jpg 500w, images/BA1_7775_1_4.jpg 640w, images/BA1_7775_1_2.jpg 750w, images/BA1_7775_1_5.jpg 828w, images/BA1_7775_1_1.jpg 960w, images/BA1_7775_1_3.jpg 1000w"
+               src="images/BA1_7775_1.jpg">
+          <figcaption data-astro-cid-7rv2slgm="">
+            <p data-astro-cid-7rv2slgm="">click for download options and details</p>
+          </figcaption>
+        </figure>
+      </li>
+
+      <li data-astro-cid-7rv2slgm="">
+        <figure class="photo-container" data-src="/v1743823540/jason.energy/v2/jason-lengstorf-wdc-s2e1-jasonhill.jpg"
+                data-alt="Jason Lengstorf on the set of Web Dev Challenge"
+                data-photographer="Jason Hill" data-photographer-site="https://jasonhillphoto.com"
+                tabindex="0" data-astro-cid-7rv2slgm="">
+          <img alt="Jason Lengstorf on the set of Web Dev Challenge" data-astro-cid-7rv2slgm="true"
+               loading="lazy" decoding="async" sizes="(min-width: 500px) 500px, 100vw"
+               style="object-fit:cover;max-width:500px;max-height:500px;aspect-ratio:1;width:100%"
+               srcset="images/jason-lengstorf-wdc-s2e1-jasonhill.jpg 500w, images/jason-lengstorf-wdc-s2e1-jasonhill_2.jpg 640w, images/jason-lengstorf-wdc-s2e1-jasonhill_4.jpg 750w, images/jason-lengstorf-wdc-s2e1-jasonhill_3.jpg 828w, images/jason-lengstorf-wdc-s2e1-jasonhill_5.jpg 960w, images/jason-lengstorf-wdc-s2e1-jasonhill_1.jpg 1000w"
+               src="images/jason-lengstorf-wdc-s2e1-jasonhill.jpg">
+          <figcaption data-astro-cid-7rv2slgm="">
+            <p data-astro-cid-7rv2slgm="">click for download options and details</p>
+          </figcaption>
+        </figure>
+      </li>
+
+      <li data-astro-cid-7rv2slgm="">
+        <figure class="photo-container" data-src="/v1743829790/jason.energy/v2/jason-lengstorf-jh-color-01.jpg"
+                data-alt="Jason Lengstorf on a brightly colored background looking severe."
+                data-photographer="Jason Hill" data-photographer-site="https://jasonhillphoto.com"
+                tabindex="0" data-astro-cid-7rv2slgm="">
+          <img alt="Jason Lengstorf on a brightly colored background looking severe." data-astro-cid-7rv2slgm="true"
+               loading="lazy" decoding="async" sizes="(min-width: 500px) 500px, 100vw"
+               style="object-fit:cover;max-width:500px;max-height:500px;aspect-ratio:1;width:100%"
+               srcset="images/jason-lengstorf-jh-color-01.jpg 500w, images/jason-lengstorf-jh-color-01_1.jpg 640w, images/jason-lengstorf-jh-color-01_2.jpg 750w, images/jason-lengstorf-jh-color-01_5.jpg 828w, images/jason-lengstorf-jh-color-01_3.jpg 960w, images/jason-lengstorf-jh-color-01_4.jpg 1000w"
+               src="images/jason-lengstorf-jh-color-01.jpg">
+          <figcaption data-astro-cid-7rv2slgm="">
+            <p data-astro-cid-7rv2slgm="">click for download options and details</p>
+          </figcaption>
+        </figure>
+      </li>
+
+      <li data-astro-cid-7rv2slgm="">
+        <figure class="photo-container" data-src="/v1743828769/jason.energy/v2/BA1_4558.jpg"
+                data-alt="Jason Lengstorf holding hot sauce bottles in front of the Leet Heat logo"
+                data-photographer="Jason Hill" data-photographer-site="https://jasonhillphoto.com"
+                tabindex="0" data-astro-cid-7rv2slgm="">
+          <img alt="Jason Lengstorf holding hot sauce bottles in front of the Leet Heat logo" data-astro-cid-7rv2slgm="true"
+               loading="lazy" decoding="async" sizes="(min-width: 500px) 500px, 100vw"
+               style="object-fit:cover;max-width:500px;max-height:500px;aspect-ratio:1;width:100%"
+               srcset="images/BA1_4558.jpg 500w, images/BA1_4558_2.jpg 640w, images/BA1_4558_5.jpg 750w, images/BA1_4558_4.jpg 828w, images/BA1_4558_1.jpg 960w, images/BA1_4558_3.jpg 1000w"
+               src="images/BA1_4558.jpg">
+          <figcaption data-astro-cid-7rv2slgm="">
+            <p data-astro-cid-7rv2slgm="">click for download options and details</p>
+          </figcaption>
+        </figure>
+      </li>
+
+      <li data-astro-cid-7rv2slgm="">
+        <figure class="photo-container" data-src="/v1743828106/jason.energy/v2/jason-lengstorf-jh-linen-02.jpg"
+                data-alt="Jason Lengstorf wearing a light colored linen outfit on a dark background."
+                data-photographer="Jason Hill" data-photographer-site="https://jasonhillphoto.com"
+                tabindex="0" data-astro-cid-7rv2slgm="">
+          <img alt="Jason Lengstorf wearing a light colored linen outfit on a dark background." data-astro-cid-7rv2slgm="true"
+               loading="lazy" decoding="async" sizes="(min-width: 500px) 500px, 100vw"
+               style="object-fit:cover;max-width:500px;max-height:500px;aspect-ratio:1;width:100%"
+               srcset="images/jason-lengstorf-jh-linen-02.jpg 500w, images/jason-lengstorf-jh-linen-02_2.jpg 640w, images/jason-lengstorf-jh-linen-02_4.jpg 750w, images/jason-lengstorf-jh-linen-02_5.jpg 828w, images/jason-lengstorf-jh-linen-02_3.jpg 960w, images/jason-lengstorf-jh-linen-02_1.jpg 1000w"
+               src="images/jason-lengstorf-jh-linen-02.jpg">
+          <figcaption data-astro-cid-7rv2slgm="">
+            <p data-astro-cid-7rv2slgm="">click for download options and details</p>
+          </figcaption>
+        </figure>
+      </li>
+
+      <li data-astro-cid-7rv2slgm="">
+        <figure class="photo-container" data-src="/v1743880312/jason.energy/v2/DSC00027.jpg"
+                data-alt="Jason Lengstorf in a hat with pink trim wearing a hoodie with bright colored accents, in front of a background that has multi-colored lights shining on it."
+                data-photographer="Jason Lengstorf" data-photographer-site="https://jason.energy"
+                tabindex="0" data-astro-cid-7rv2slgm="">
+          <img alt="Jason Lengstorf in a hat with pink trim wearing a hoodie with bright colored accents, in front of a background that has multi-colored lights shining on it."
+               data-astro-cid-7rv2slgm="true" loading="lazy" decoding="async"
+               sizes="(min-width: 500px) 500px, 100vw"
+               style="object-fit:cover;max-width:500px;max-height:500px;aspect-ratio:1;width:100%"
+               srcset="images/DSC00027.jpg 500w, images/DSC00027_5.jpg 640w, images/DSC00027_3.jpg 750w, images/DSC00027_1.jpg 828w, images/DSC00027_4.jpg 960w, images/DSC00027_2.jpg 1000w"
+               src="images/DSC00027.jpg">
+          <figcaption data-astro-cid-7rv2slgm="">
+            <p data-astro-cid-7rv2slgm="">click for download options and details</p>
+          </figcaption>
+        </figure>
+      </li>
+    </ul>
+  </section>
+
+  <dialog id="media" popover="" data-astro-cid-7rv2slgm="">
+    <button id="close-modal" data-astro-cid-7rv2slgm="">� close</button>
+    <img src="" alt="" class="preview" data-astro-cid-7rv2slgm="">
+    <div class="options" data-astro-cid-7rv2slgm="">
+      <a href="#" class="thumb" data-astro-cid-7rv2slgm="">thumbnail crop</a>
+      <a href="#" class="web" data-astro-cid-7rv2slgm="">web resolution</a>
+      <a href="#" class="full" data-astro-cid-7rv2slgm="">full resolution</a>
+      <a href="" class="photographer" data-astro-cid-7rv2slgm=""> Photo by </a>
+    </div>
+  </dialog>
+
+  <footer data-astro-cid-k2f5zb5c="">
+    <div data-astro-cid-k2f5zb5c="">
+      <p data-astro-cid-k2f5zb5c="">© <a href="https://jason.energy" rel="home" data-astro-cid-k2f5zb5c="">Jason Lengstorf</a></p>
+      <p data-astro-cid-k2f5zb5c="">I’m nicer than I look, I swear.</p>
+      <p data-astro-cid-k2f5zb5c="">
+        Don’t let my <abbr title="Resting Murder Face" data-astro-cid-k2f5zb5c="">RMF</abbr> fool you; there’s
+        no murder in my heart.
+      </p>
+    </div>
+    <div data-astro-cid-k2f5zb5c="">
+      <ul data-astro-cid-k2f5zb5c="">
+        <li data-astro-cid-k2f5zb5c=""><a href="https://partners.codetv.dev" data-astro-cid-k2f5zb5c="">work with me</a></li>
+        <li data-astro-cid-k2f5zb5c=""><a href="https://jason.energy/uses" data-astro-cid-k2f5zb5c="">stuff I use</a></li>
+        <li data-astro-cid-k2f5zb5c=""><a href="mailto:jason@codetv.dev" data-astro-cid-k2f5zb5c="">jason@codetv.dev</a></li>
+      </ul>
+    </div>
+  </footer>
+</main>
+
+<!-- Exploding Nav / Boop Drop scripts (added) -->
 <script src="js/matter.min.js"></script>
 <script src="js/howler.min.js"></script>
 <script src="js/home.min.js"></script>
-<script async="" id="netlify-rum-container" src="js/rum.js" data-netlify-rum-site-id="cbf6efe7-d756-4aa3-bb3f-71bfd5a7f27c" data-netlify-deploy-branch="main" data-netlify-deploy-context="production" data-netlify-cwv-token="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzaXRlX2lkIjoiY2JmNmVmZTctZDc1Ni00YWEzLWJiM2YtNzFiZmQ1YTdmMjdjIiwiYWNjb3VudF9pZCI6IjVhNGRiZjc4ODE5ODc2NWJkNWExMjdmMyIsImRlcGxveV9pZCI6IjY4NzljZjM0YjcxZDNmMDAwODY5ZDA4NCIsImlzc3VlciI6Im5mc2VydmVyIn0.nKZzKlESwL_1-vmDaXeaNibCR897KEOdME4KNHhVrUo"></script></body></html>
+
+<!-- Existing site scripts -->
+<script async id="netlify-rum-container" src="js/rum.js"
+        data-netlify-rum-site-id="cbf6efe7-d756-4aa3-bb3f-71bfd5a7f27c"
+        data-netlify-deploy-branch="main"
+        data-netlify-deploy-context="production"
+        data-netlify-cwv-token="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzaXRlX2lkIjoiY2JmNmVmZTctZDc1Ni00YWEzLWJiM2YtNzFiZmQ1YTdmMjdjIiwiYWNjb3VudF9pZCI6IjVhNGRiZjc4ODE5ODc2NWJkNWExMjdmMyIsImRlcGxveV9pZCI6IjY4NzljZjM0YjcxZDNmMDAwODY5ZDA4NCIsImlzc3VlciI6Im5mc2VydmVyIn0.nKZzKlESwL_1-vmDaXeaNibCR897KEOdME4KNHhVrUo"></script>
+</body>
+</html>
