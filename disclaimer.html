@@ -6,21 +6,37 @@
   <title>Disclaimer</title>
   <link rel="stylesheet" href="css/global.css">
   <style>
+    body {
+      line-height: 1.6; /* improves readability */
+    }
+
     main {
       max-width: 700px;
-      margin: 4rem auto;
+      margin: 6rem auto;
       padding: 2rem;
       background: #1e083c;
       border: 1px solid #fa0dc7;
       border-radius: 1rem;
+      box-sizing: border-box;
     }
+
+    /* Extra padding on mobile if you want it even looser */
+    @media (max-width: 600px) {
+      main {
+        margin: 2rem 1rem; /* smaller top/bottom margin, small left/right gap */
+        padding: 1.5rem;
+      }
+    }
+
     h1 {
       font-size: 2rem;
       margin-bottom: 1rem;
     }
+
     p {
       margin-bottom: 1rem;
     }
+
     .button {
       display: inline-block;
       padding: 0.75rem 1.5rem;
@@ -31,6 +47,7 @@
       border-radius: 0.5rem;
       font-weight: bold;
     }
+
     .button:hover {
       background-color: var(--color-button-hover-bg);
       color: var(--color-button-hover-text);
@@ -46,7 +63,9 @@
     <p><strong>None of this is financial advice.</strong> It’s for educational and informational purposes only. I’m not FCA-regulated, and I don’t want to be.</p>
     <p>Please don’t invest based on anything here without doing your own research. Ideally, consult a qualified financial advisor first.</p>
     <p>By clicking below, you agree to these terms and understand this site is just a blog — not a tip sheet.</p>
-    <a class="button" href="./index.html" onclick="localStorage.setItem('disclaimerAccepted', 'true')">I Accept – Take Me to the Site</a>
+    <a class="button" href="./index.html" onclick="localStorage.setItem('disclaimerAccepted', 'true')">
+      I Accept – Take Me to the Site
+    </a>
   </main>
 </body>
 </html>
