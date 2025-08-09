@@ -18,6 +18,7 @@
   <link rel="preload" href="/fonts/jwf-bold.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/jwf-bolditalic.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/jwf-ultra.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="images/bb8.webm" as="audio">
 
   <!-- Preconnect for assets -->
   <link rel="preconnect" href="https://res.cloudinary.com" crossorigin>
@@ -114,7 +115,7 @@
         <span class="hero-box">Reed</span>
         <span class="hero-tagline">Scrum Master</span>
       </h1>
-      <button class="hero-cycle">
+      <button class="hero-cycle" data-sound-click="hero">
         <span class="sr-only">change tagline</span>
       </button>
     </section>
@@ -142,8 +143,9 @@
   </footer>
 
   <!-- Scripts -->
-  <script src="js/matter.min.js"></script>
   <script src="js/howler.min.js"></script>
+  <script src="js/sound.js"></script> <!-- NEW: our sound glue -->
+  <script src="js/matter.min.js"></script>
   <script src="js/home.min.js"></script>
 
   <!-- Netlify RUM -->
