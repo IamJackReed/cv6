@@ -3,61 +3,64 @@
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <!-- Redirect to disclaimer if not accepted -->
   <script>
     if (!localStorage.getItem('disclaimerAccepted')) {
-      window.location.href = './disclaimer.html';
+      window.location.href = 'disclaimer.html';
     }
   </script>
 
-  <!-- Preload self-hosted fonts -->
-  <link rel="preload" href="/fonts/jwf-book.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="/fonts/jwf-bookitalic.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="/fonts/jwf-bold.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="/fonts/jwf-bolditalic.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="/fonts/jwf-ultra.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="images/bb8.webm" as="audio">
+  <!-- Preload self-hosted fonts (SUBPATH-SAFE: no leading /) -->
+  <link rel="preload" href="fonts/jwf-book.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/jwf-bookitalic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/jwf-bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/jwf-bolditalic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/jwf-ultra.woff2" as="font" type="font/woff2" crossorigin>
 
-  <!-- Preconnect for assets -->
+  <!-- Preload sounds (webm + mp3 for Safari/iOS) -->
+  <link rel="preload" href="images/bb8.webm" as="audio">
+  <link rel="preload" href="images/bb8.mp3" as="audio">
+
+  <!-- Preconnect for external assets -->
   <link rel="preconnect" href="https://res.cloudinary.com" crossorigin>
 
-  <!-- Global Styles -->
+  <!-- Global CSS -->
   <link rel="stylesheet" href="css/global.css" />
 
-  <!-- Favicons & Manifest -->
+  <!-- Favicons & Manifest (SUBPATH-SAFE) -->
   <link rel="apple-touch-icon" sizes="152x152" href="images/apple-touch-icon.png" />
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png" />
-  <link rel="manifest" href="/site.webmanifest" />
   <link rel="mask-icon" href="images/safari-pinned-tab.svg" color="#ff87d4" />
+  <link rel="manifest" href="site.webmanifest" />
   <meta name="msapplication-TileColor" content="#ffe742" />
   <meta name="theme-color" content="#ffe742" />
 
   <!-- SEO & Social -->
   <title>Jack Reed — Scrum Master</title>
-  <link rel="canonical" href="https://iamjackreed.github.io/cv/" />
+  <link rel="canonical" href="https://iamjackreed.github.io/cv6/" />
   <meta name="description" content="Jack Reed - Scrum Master working in London at Legal & General." />
-  <meta name="image" content="images/og-image.jpg" />
+  <meta name="image" content="https://iamjackreed.github.io/cv6/images/og-image.jpg" />
 
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://iamjackreed.github.io/cv/" />
+  <meta property="og:url" content="https://iamjackreed.github.io/cv6/" />
   <meta property="og:title" content="Jack Reed" />
   <meta property="og:description" content="Jack Reed - Scrum Master working in London at Legal & General." />
-  <meta property="og:image" content="images/og-image.jpg" />
+  <meta property="og:image" content="https://iamjackreed.github.io/cv6/images/og-image.jpg" />
 
   <meta name="twitter:dnt" content="on" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:creator" content="@" />
   <meta name="twitter:title" content="Jack Reed" />
   <meta name="twitter:description" content="Scrum Master working in London at Legal & General." />
-  <meta name="twitter:image" content="images/og-image.jpg" />
+  <meta name="twitter:image" content="https://iamjackreed.github.io/cv6/images/og-image.jpg" />
 
-  <!-- RSS -->
-  <link rel="alternate" type="application/rss+xml" title="RSS Feed for jack.reed" href="/feed.xml" />
+  <!-- RSS (SUBPATH-SAFE) -->
+  <link rel="alternate" type="application/rss+xml" title="RSS Feed for jack.reed" href="feed.xml" />
 
-  <!-- Rel Me Links -->
+  <!-- Rel Me -->
   <link href="https://hachyderm.io/@" rel="me" />
   <link href="https://twitter.com/" rel="me" />
   <link href="https://github.com/" rel="me" />
@@ -66,25 +69,25 @@
 <body>
   <header>
     <nav class="main-nav offset-right">
-      <a href="/about">About</a>
-      <a href="/posts">Posts</a>
+      <a href="about">About</a>
+      <a href="posts">Posts</a>
     </nav>
 
     <div class="exploding-nav first-run" style="--navCount: 3">
-      <button class="exploding-nav-button">
+      <button class="exploding-nav-button" data-sound-hover="pop" data-sound-click="click">
         <img class="face" src="images/jason-brains.png" alt="Menu Icon" />
         <span class="sr-only">Show Navigation</span>
       </button>
       <nav class="home-page-nav">
-        <a class="home-item" href="/#practices" style="--offset: 1">
+        <a class="home-item" href="#practices" style="--offset: 1">
           Patterns & Practices
           <img src="images/camera.png" alt="">
         </a>
-        <a class="home-item" href="/#lab" style="--offset: 2">
+        <a class="home-item" href="#lab" style="--offset: 2">
           The Lab
           <img src="images/terminal.png" alt="">
         </a>
-        <a class="home-item" href="/#Markets" style="--offset: 3">
+        <a class="home-item" href="#Markets" style="--offset: 3">
           Market Diary
           <img src="images/newsletter.png" alt="">
         </a>
@@ -115,6 +118,7 @@
         <span class="hero-box">Reed</span>
         <span class="hero-tagline">Scrum Master</span>
       </h1>
+      <!-- SFX key is bb8; router also accepts 'hero' -->
       <button class="hero-cycle" data-sound-click="bb8">
         <span class="sr-only">change tagline</span>
       </button>
@@ -135,26 +139,25 @@
   <footer>
     <span class="boops">powered by boops</span>
     <nav class="footer-nav">
-      <a href="/posts">Posts</a>
-      <a href="/newsletter">Newsletter</a>
-      <a href="/uses">Uses</a>
+      <a href="posts">Posts</a>
+      <a href="newsletter">Newsletter</a>
+      <a href="uses">Uses</a>
       <a href="https://github.com/jlengstorf/jason.energy">source code</a>
     </nav>
   </footer>
 
-  <!-- Scripts -->
+  <!-- Scripts: vendor -> your sound init -> others -->
   <script src="js/howler.min.js"></script>
-  <script src="js/sound.js"></script> <!-- NEW: our sound glue -->
+  <script src="js/sound.js"></script>
   <script src="js/matter.min.js"></script>
   <script src="js/home.min.js"></script>
 
-  <!-- Netlify RUM -->
+  <!-- Netlify RUM (leave as-is if you use it) -->
   <script async id="netlify-rum-container"
           src="rum"
           data-netlify-rum-site-id="cbf6efe7-d756-4aa3-bb3f-71bfd5a7f27c"
           data-netlify-deploy-branch="main"
-          data-netlify-deploy-context="production"
-          data-netlify-cwv-token="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...">
+          data-netlify-deploy-context="production">
   </script>
 </body>
 </html>
