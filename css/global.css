@@ -367,8 +367,8 @@ header a{ color:#171321; padding:.5rem; text-decoration:none; }
 :root {
   --jl-bg: #251b30;          /* dark header */
   --jl-txt: #e8e8ea;         /* light text */
-  --jl-muted: #a9abb3;       /* muted */
-  --jl-accent: #65d46e;      /* subtle green accent */
+  --jl-muted: #ffffff;       /* muted */
+  --jl-accent: #fc64c9;      /* subtle green accent */
   --jl-gap: clamp(12px, 2vw, 24px);
   --jl-padY: 10px;
   --jl-padX: clamp(12px, 4vw, 48px);
