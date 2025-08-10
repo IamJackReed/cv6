@@ -64,7 +64,7 @@
 :root{
   /* Colors */
   --color-pink-100:#fcf2f9;
-  --color-pink-500:#ff97dd;
+  --color-pink-700:#ff97dd;
   --color-pink-700:#f445b9;
   --color-pink-700-alpha:rgba(143, 6, 95, 0.6);
   --color-pink-900:#961d6e;
@@ -133,7 +133,7 @@
 
   --color-home-nav-item-bg:var(--color-gray-000-alpha);
   --color-home-nav-item-active-bg:var(--color-yellow-500);
-  --color-home-nav-item-active-border:var(--color-pink-500);
+  --color-home-nav-item-active-border:var(--color-pink-700);
   --color-home-nav-item-active-color:var(--color-gray-900);
 
   --color-hero-text:var(--color-gray-900);
@@ -359,7 +359,7 @@ header a{ color:#171321; padding:.5rem; text-decoration:none; }
 .exploding-nav-button:focus,
 .exploding-nav-button:hover{
   background:var(--color-yellow-500);
-  border-color:var(--color-pink-500);
+  border-color:var(--color-pink-700);
   border-radius:0 0 50% 50%;
   outline:0;
 }
@@ -420,7 +420,7 @@ header a{ color:#171321; padding:.5rem; text-decoration:none; }
 
 .site-settings-button:focus,
 .site-settings-button:hover{
-  background:var(--color-pink-500);
+  background:var(--color-pink-700);
   border-color:var(--color-pink-700);
 }
 
@@ -565,12 +565,12 @@ main.home{ margin:0; max-width:100vw; }
   border-radius:50%; content:""; display:block; height:0; left:50%;
   padding-bottom:calc(.75rem - 2px); position:absolute; top:50%; transform:translate(-50%,-50%); width:.75rem;
 }
-.bio-label::before{ border:1px solid var(--color-pink-500); transition:200ms background linear; z-index:10; }
-.bio-label::after{ background:var(--color-pink-500); opacity:0; transition:200ms opacity linear; }
+.bio-label::before{ border:1px solid var(--color-pink-700); transition:200ms background linear; z-index:10; }
+.bio-label::after{ background:var(--color-pink-700); opacity:0; transition:200ms opacity linear; }
 :checked + .bio-label::before,
 :focus + .bio-label::before,
-:hover + .bio-label::before{ border-color:var(--color-pink-500); }
-:focus + .bio-label::before{ outline:2px solid var(--color-pink-500); outline-offset:.125rem; }
+:hover + .bio-label::before{ border-color:var(--color-pink-700); }
+:focus + .bio-label::before{ outline:2px solid var(--color-pink-700); outline-offset:.125rem; }
 :checked + .bio-label::after{ opacity:1; }
 
 .bio-social{ margin-top:2.25rem; }
