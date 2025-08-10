@@ -1,6 +1,11 @@
 /* ===============================
    FONTS — jwf (self-hosted)
    =============================== */
+/* Defines custom font faces for the project.
+   The 'jwf' font family is loaded in multiple weights and styles (normal, italic, bold, bold italic, ultra bold).
+   Fonts are self-hosted in WOFF2 and WOFF formats for browser compatibility.
+   The 'font-display: swap' ensures text is shown immediately with a fallback font until the custom font is loaded.
+*/
 
 @font-face{
   font-family: "jwf";
@@ -46,6 +51,15 @@
 /* ===============================
    THEME TOKENS
    =============================== */
+/* Global CSS variables for colors, typography, and semantic theme tokens.
+   These make it easy to change the site's look without editing multiple style rules.
+   Includes:
+     - Color palette (pink, gray, teal, yellow, blue) in multiple shades
+     - Semantic colors for text, links, buttons, backgrounds
+     - Font stacks for sans-serif and serif
+     - Backgrounds and borders for special elements (hero, nav items, footer, etc.)
+   Dark mode adjustments are handled in the '@media (prefers-color-scheme: dark)' block.
+*/
 
 :root{
   /* Colors */
@@ -67,20 +81,29 @@
   --color-gray-900:#ffffff;         /* you were using white as “900” in dark areas */
   --color-gray-900-alpha:#ffffff22;
 
-  --color-teal-500:#87fffb;
-  --color-teal-500-alpha:#87fffb22;
-  --color-teal-700:#63ddd9;
+  --color-teal-500: #34077e;
+  --color-teal-500-alpha: #251b30;
+  --color-teal-700: #34077e;
   --color-teal-900:#002827;
 
   --color-yellow-500:#171321;
   --color-yellow-500-alpha:#17132122;
 
-  --color-blue-500:#04d2ff;
+  --color-blue-500: #251b30;
   --color-blue-500-alpha:#04d2ff22;
-  --color-blue-700:#02a7cc;
+  --color-blue-700: #34077e;
   --color-blue-900:#171321;
 
-  /* Typography */
+ /* ===============================
+   TYPOGRAPHY
+   =============================== */
+/* Styles all heading levels, bold/italic text, lists, and links.
+   - Headings use the custom sans-serif font and are scaled for hierarchy.
+   - Strong/bold text is slightly darker for emphasis.
+   - Links inherit theme link color.
+   - Lists have reduced top margins for tighter layouts.
+*/
+
   --font-sans: "jwf", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
                Helvetica, Arial, sans-serif, "Apple Color Emoji",
                "Segoe UI Emoji","Segoe UI Symbol";
@@ -161,6 +184,13 @@
 /* ===============================
    BASE / RESET
    =============================== */
+/* Establishes baseline styles across browsers.
+   - Universal box-sizing: border-box for predictable layout sizing.
+   - Removes default margins from all elements and sets consistent spacing between siblings.
+   - Sets default font family, base font size (responsive at 1000px), and smooth scroll behavior.
+   - Applies anti-aliasing for better font rendering.
+   - Ensures images are responsive and block-level.
+*/
 
 *,
 *::before,
@@ -192,6 +222,12 @@ img{ max-width:100%; display:block; }
 /* ===============================
    TYPOGRAPHY
    =============================== */
+/* Styles all heading levels, bold/italic text, lists, and links.
+   - Headings use the custom sans-serif font and are scaled for hierarchy.
+   - Strong/bold text is slightly darker for emphasis.
+   - Links inherit theme link color.
+   - Lists have reduced top margins for tighter layouts.
+*/
 
 h1,h2,h3,h4,h5,h6{
   color: var(--color-text-heading);
@@ -213,6 +249,13 @@ a{ color: var(--color-link); }
 /* ===============================
    HEADER / NAV
    =============================== */
+/* Styles the top navigation area, including:
+     - The main site header with background and bottom border
+     - Main navigation links with responsive layout
+     - "Exploding nav" (special animated menu) — positioned absolutely with images and transformations
+     - States for active/hover/focus interactions
+   This section controls how the header and navigation appear on all screen sizes.
+*/
 
 header{
   background: var(--color-gray-900);
@@ -359,6 +402,11 @@ header a{ color:#171321; padding:.5rem; text-decoration:none; }
 /* ===============================
    SITE SETTINGS
    =============================== */
+/* Controls the site settings widget in the top-right corner.
+   - Styles the circular gear/sound buttons
+   - Hover and focus states change background/border colors
+   - Handles the hidden/displayed panel for settings
+*/
 
 .site-settings{
   margin-top:.25rem; position:absolute; top:5px; right:10px; width:50px; z-index:900;
@@ -391,6 +439,12 @@ header a{ color:#171321; padding:.5rem; text-decoration:none; }
 /* ===============================
    LAYOUT
    =============================== */
+/* Global page layout styles for <main> and section blocks.
+   - Max widths and responsive margins
+   - Padding and border setup for content blocks
+   - Hero section styling (big title, tagline, rotating icon button)
+   - Intro text and lede styles for centered block intros
+*/
 
 main{
   margin:4rem auto;
@@ -469,6 +523,11 @@ main.home{ margin:0; max-width:100vw; }
 /* ===============================
    BIO
    =============================== */
+/* Styles the bio/about section.
+   - Grid layout for image and text on larger screens
+   - Bio length control widget with radio buttons styled as custom dots
+   - Social profile links with hover/focus effects
+*/
 
 .bio-heading{ font-size:1.125rem; margin:0; text-align:center; }
 .bio-container{ margin:0 auto; max-width:1100px; width:90vw; }
@@ -538,6 +597,11 @@ main.home{ margin:0; max-width:100vw; }
 /* ===============================
    PHOTOS / GALLERY
    =============================== */
+/* Handles the gallery layout and styling.
+   - Thumbnail images and captions
+   - Flexbox layout for thumbnails and gallery links
+   - Small typography for captions and labels
+*/
 
 .photos{ margin:3rem auto 0; max-width:400px; }
 @media (min-width:900px){ .photos{ margin:0; } }
@@ -569,6 +633,13 @@ main.home{ margin:0; max-width:100vw; }
 /* ===============================
    CONTENT / POSTS
    =============================== */
+/* Styles the blog post layouts and previews.
+   - Post headings, author details, and sidebar positioning
+   - Table of contents styles
+   - Figures with captions and attributions
+   - Pull quotes and aside content
+   - Grid of post previews with background images
+*/
 
 .details figure,
 .gallery-credit,
@@ -699,6 +770,10 @@ blockquote{
 /* ===============================
    FOOTNOTES
    =============================== */
+/* Handles footnote styling and toggleable content.
+   - Collapsible note areas
+   - Special inline phrase styling with an asterisk
+*/
 
 .footnote{ background:var(--color-accent-background); border-radius:.25rem; font-size:.75rem; line-height:1.25rem; }
 .footnote-content{ display:none; padding:1rem 1rem 1rem 1.5rem; }
@@ -718,6 +793,11 @@ blockquote{
 /* ===============================
    LISTS / USES
    =============================== */
+/* Styles lists of tools/uses on the "Uses" page.
+   - Responsive grid of items
+   - Small typography for descriptions and tags
+   - Tags are styled as inline hash (#) labels
+*/
 
 .item-list{
   display:grid; gap:1.5rem; grid-template-columns:repeat(auto-fit,295px); justify-content:center; margin:0;
@@ -735,6 +815,11 @@ blockquote{
 /* ===============================
    FORMS / OPT-IN
    =============================== */
+/* Styles newsletter or opt-in forms.
+   - Form layout adapts for small and larger screens
+   - Inputs and buttons styled with theme colors
+   - Notice text for privacy or subscription details
+*/
 
 .opt-in{ display:block; margin:1.5rem auto 0; width:100%; }
 .block-intro + .opt-in{ margin-top:3rem; }
@@ -767,6 +852,11 @@ blockquote{
 /* ===============================
    FOOTER
    =============================== */
+/* Footer layout and colors.
+   - Flexbox layout for links and nav
+   - Background and border colors match theme
+   - Typography in lowercase for stylistic consistency
+*/
 
 footer{
   background:var(--color-footer-bg); border-top:1px solid var(--color-footer-border);
@@ -780,6 +870,9 @@ footer nav{ display:flex; gap:1rem; justify-content:space-between; }
 /* ===============================
    ACCESSIBILITY
    =============================== */
+/* Screen reader-only class to visually hide elements but keep them accessible to assistive technologies.
+   - Used for descriptive text that's hidden from sighted users.
+*/
 
 .sr-only:not(:focus):not(:active){
   clip:rect(0 0 0 0);
