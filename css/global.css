@@ -363,6 +363,93 @@ header a{ color:#171321; padding:.5rem; text-decoration:none; }
   border-radius:0 0 50% 50%;
   outline:0;
 }
+/* === Jason-style Top Bar (keeps your exploding-head nav unchanged) === */
+:root {
+  --jl-bg: #251b30;          /* dark header */
+  --jl-txt: #e8e8ea;         /* light text */
+  --jl-muted: #a9abb3;       /* muted */
+  --jl-accent: #65d46e;      /* subtle green accent */
+  --jl-gap: clamp(12px, 2vw, 24px);
+  --jl-padY: 10px;
+  --jl-padX: clamp(12px, 4vw, 48px);
+  --jl-font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, "Helvetica Neue", Arial, "Apple Color Emoji","Segoe UI Emoji";
+}
+
+/* Layer the new header above page content but BELOW your exploding nav if needed */
+.jl-topbar {
+  position: sticky; top: 0; z-index: 40;
+  background: var(--jl-bg);
+  color: var(--jl-txt);
+  border-bottom: 1px solid rgba(255,255,255,.06);
+  backdrop-filter: saturate(1.2) blur(6px);
+}
+
+.jl-nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--jl-padY) var(--jl-padX);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--jl-gap);
+  font-family: var(--jl-font);
+  line-height: 1;
+}
+
+.jl-brand {
+  color: var(--jl-txt);
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.jl-links {
+  list-style: none;
+  margin: 0; padding: 0;
+  display: flex; gap: clamp(10px, 2.2vw, 28px);
+}
+
+.jl-links a {
+  color: var(--jl-muted);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  letter-spacing: .02em;
+  padding: 8px 0;
+  position: relative;
+  transition: color .2s ease;
+}
+
+/* Subtle underline-on-hover like Jason’s low-key style */
+.jl-links a::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 2px; transform: scaleX(0);
+  background: var(--jl-accent);
+  transition: transform .2s ease;
+  transform-origin: left;
+  opacity: .85;
+}
+.jl-links a:hover,
+.jl-links a:focus-visible {
+  color: var(--jl-txt);
+}
+.jl-links a:hover::after,
+.jl-links a:focus-visible::after,
+.jl-links a[aria-current="page"]::after {
+  transform: scaleX(1);
+}
+
+/* Small screens: keep it simple and let your exploding-head nav do its thing */
+@media (max-width: 640px) {
+  .jl-links { gap: 16px; }
+  .jl-brand { font-size: 0.95rem; }
+}
+
+/* Ensure this header doesn’t collide with your existing exploding nav */
+.exploding-nav { z-index: 50; } /* if your current nav uses a class like this */
 
 .home-page-nav{
   margin-top:0; right:30px; position:absolute; top:110px; visibility:hidden; width:220px; z-index:90;
