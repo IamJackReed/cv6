@@ -380,7 +380,6 @@ header a{ color:#171321; padding:.5rem; text-decoration:none; }
   position: sticky; top: 0; z-index: 40;
   background: var(--jl-bg);
   color: var(--jl-txt);
-  border-bottom: 1px solid rgba(255,255,255,.06);
   backdrop-filter: saturate(1.2) blur(6px);
 }
 
