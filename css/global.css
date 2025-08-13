@@ -110,40 +110,36 @@
   --font-serif: "jwf", Georgia, "Times New Roman", Times, serif; /* same family for consistency */
 
   /* Semantic tokens */
-  --color-text-default:var(--color-gray-700);
-  --color-text-emphasized:var(--color-gray-800);
-  --color-text-heading:var(--color-gray-900);
-  --color-text-muted:var(--color-gray-500);
-  --color-link:var(--color-blue-700);
+    --color-text-default:var(--color-gray-300);
+    --color-text-emphasized:var(--color-gray-100);
+    --color-text-heading:var(--color-gray-000);
+    --color-text-muted:var(--color-gray-500);
+    --color-link:var(--color-blue-500);
+    --color-pink-border:var(--color-pink-900);
 
-  --color-pink-border:var(--color-pink-900);
-  --color-accent-background:var(--color-blue-500-alpha);
-  --color-primary:var(--color-pink-700);
+    --color-button-border:var(--color-pink-900);
+    --color-button-text:var(--color-primary);
+    --color-button-hover-bg:var(--color-primary);
+    --color-button-hover-border:var(--color-gray-900);
+    --color-button-hover-text:var(--color-gray-900);
 
-  --color-button-bg:var(--color-background);
-  --color-button-border:var(--color-primary);
-  --color-button-text:var(--color-primary);
-  --color-button-hover-bg:var(--color-pink-700);
-  --color-button-hover-border:var(--color-primary);
-  --color-button-hover-text:var(--color-gray-000);
+    --color-background:var(--color-gray-900);
+    --color-border:var(--color-gray-800);
+    --color-foreground: #ffffff;
 
-  --color-background:var(--color-gray-000);
-  --color-border:var(--color-gray-100);
-  --color-foreground: #ffffff;
+    --color-home-nav-item-bg:#ff31db4d;
+    --color-home-nav-item-active-bg:#4c1e45;
+    --color-home-nav-item-active-border:var(--color-yellow-500);
+    --color-home-nav-item-active-color:var(--color-gray-900);
 
-  --color-home-nav-item-bg:var(--color-gray-000-alpha);
-  --color-home-nav-item-active-bg:var(--color-yellow-500);
-  --color-home-nav-item-active-border:var(--color-pink-700);
-  --color-home-nav-item-active-color:var(--color-gray-900);
+    --color-hero-text:var(--color-yellow-500);
+    --color-hero-bg:var(--color-gray-900);
 
-  --color-hero-text:var(--color-gray-900);
-  --color-hero-bg:var(--color-yellow-500);
+    --color-blue-bg:var(--color-blue-900);
+    --color-blue-border:var(--color-blue-700);
 
-  --color-blue-bg:var(--color-teal-500);
-  --color-blue-border:var(--color-teal-700);
-
-  --color-footer-bg:var(--color-gray-050);
-  --color-footer-border:var(--color-gray-100);
+    --color-footer-bg:var(--color-gray-800);
+    --color-footer-border:var(--color-gray-700);
 }
 
 @media (prefers-color-scheme: dark){
