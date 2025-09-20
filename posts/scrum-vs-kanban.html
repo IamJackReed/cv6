@@ -1,78 +1,297 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Scrum vs. Kanban — Jack Reed</title>
-  <link rel="stylesheet" href="../css/global.css" />
+  <title>About</title>
+
+  <!-- Global tokens / base styles -->
+  <link rel="stylesheet" href="css/global.css" />
+
   <style>
-   body {
-     color: #000000 !important;
-     }
-   </style>
+    /* ============ Jason-style longform layout ============ */
+    :root{
+      --page-max: 1100px;
+      --prose-max: 760px;      /* narrow readable measure */
+      --toc-w: 260px;          /* sticky TOC width */
+      --rule: color-mix(in oklab, var(--color-foreground) 14%, transparent);
+      --muted: color-mix(in oklab, var(--color-foreground) 55%, var(--color-background));
+      --lead: 1.1;
+    }
+
+    body{
+      background: var(--color-background);
+      color: var(--color-foreground);
+      margin: 0;
+    }
+
+    .wrap{
+      max-width: var(--page-max);
+      margin: 0 auto;
+      padding: clamp(1.25rem, 2.5vw, 2rem);
+    }
+
+    header.site{
+      padding-top: clamp(2rem, 4vw, 3rem);
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--rule);
+      margin-bottom: clamp(1.5rem, 2.5vw, 2rem);
+    }
+    .site a.home{
+      text-decoration: none;
+      font-weight: 800;
+      letter-spacing: .01em;
+      color: hotpink;                /* nod to your brand accent */
+      border-bottom: 2px solid hotpink;
+      padding-bottom: .1rem;
+    }
+
+    /* Grid: sticky TOC + article */
+    .grid{
+      display: grid;
+      grid-template-columns: 1fr min(var(--prose-max), 100%) var(--toc-w);
+      gap: clamp(1rem, 3vw, 2rem);
+    }
+
+    /* Hide left gutter on small screens */
+    @media (max-width: 1100px){
+      .grid{
+        grid-template-columns: minmax(0, 1fr);
+      }
+      aside.toc{
+        order: -1;
+        position: static;
+        max-width: none;
+        border: 1px solid var(--rule);
+        border-radius: .75rem;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        background: color-mix(in oklab, var(--color-background) 85%, #0000);
+      }
+    }
+
+    article{
+      max-width: 100%;
+      line-height: 1.7;
+      font-size: clamp(1.02rem, 1.2vw + .9rem, 1.15rem);
+    }
+
+    h1{
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.1;
+      letter-spacing: -0.01em;
+      margin: 0 0 .25rem 0;
+      color: var(--color-gray-000);
+    }
+
+    .sub{
+      color: var(--muted);
+      font-size: .98rem;
+      margin-top: .25rem;
+    }
+
+    .lead{
+      font-size: clamp(1.1rem, 1.2vw + 1rem, 1.35rem);
+      line-height: var(--lead);
+      color: var(--color-gray-000);
+      margin: 1.25rem 0 1rem 0;
+    }
+
+    .rule{
+      height: 1px; background: var(--rule);
+      margin: 1.25rem 0;
+    }
+
+    /* Section headings */
+    h2{
+      margin-top: 2.25rem;
+      margin-bottom: .25rem;
+      line-height: 1.2;
+      letter-spacing: -.01em;
+      color: var(--color-gray-000);
+      font-size: clamp(1.35rem, 2.2vw, 1.75rem);
+    }
+    h3{
+      margin-top: 1.5rem;
+      margin-bottom: .25rem;
+      font-size: clamp(1.1rem, 1.4vw, 1.25rem);
+      color: var(--color-gray-000);
+    }
+
+    p, li{ color: var(--color-gray-000); }
+
+    /* Callouts (disclaimer) */
+    .callout{
+      border: 2px solid hotpink;
+      background: #1e083c;    /* your card bg */
+      border-radius: .9rem;
+      padding: 1rem 1.1rem;
+      margin: 1.25rem 0;
+    }
+    .callout strong{
+      font-weight: 900;
+    }
+
+    /* Principles – compact list looking like rules */
+    .principles{
+      display: grid;
+      gap: .6rem;
+      margin: 1rem 0;
+      padding: 0;
+      list-style: none;
+    }
+    .principles li{
+      border-left: 4px solid hotpink;
+      padding: .5rem .75rem .5rem .85rem;
+      background: color-mix(in oklab, var(--color-background) 92%, #0000);
+      border-radius: .4rem;
+    }
+
+    /* Sticky TOC (desktop) */
+    aside.toc{
+      position: sticky;
+      top: 1.5rem;
+      height: max-content;
+      padding-top: .25rem;
+      padding-left: 1rem;
+    }
+    .toc h2{
+      font-size: .95rem;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      color: var(--muted);
+      margin-top: 0;
+      margin-bottom: .35rem;
+    }
+    .toc nav a{
+      display: block;
+      padding: .25rem 0;
+      color: var(--color-gray-000);
+      text-decoration: none;
+      border-left: 2px solid transparent;
+      padding-left: .5rem;
+    }
+    .toc nav a:hover{ border-color: hotpink; color: hotpink; }
+
+    /* Footer back button */
+    .back{
+      display: inline-block;
+      margin-top: 2rem;
+      text-decoration: none;
+      padding: .75rem 1.25rem;
+      border-radius: .6rem;
+      border: 2px solid hotpink;
+      font-weight: 900;
+      letter-spacing: .02em;
+      text-transform: uppercase;
+      color: hotpink;
+      background: var(--color-button-bg);
+    }
+    .back:hover, .back:focus{
+      background: var(--color-button-hover-bg);
+      color: var(--color-button-hover-text);
+      border-color: var(--color-button-hover-border);
+      outline: 0;
+    }
+
+    /* Fine typography touches */
+    em{ font-style: italic; }
+    strong{ font-weight: 800; }
+    blockquote{
+      margin: 1rem 0;
+      padding-left: 1rem;
+      border-left: 3px solid var(--rule);
+      color: var(--muted);
+    }
+  </style>
 </head>
-
 <body>
-  <header class="jl-topbar" role="banner" aria-label="Global">
-    <nav class="jl-nav" aria-label="Primary">
-      <ul class="jl-links">
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="../about.html">About</a></li>
-        <li><a href="../posts.html">Posts</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <main class="post">
-    <aside class="details">
-      <figure>
-        <img src="../images/jason-brains.png" alt="Jack Reed">
-      </figure>
-    </aside>
-
-    <header class="heading">
-      <h1>Scrum vs. Kanban</h1>
-      <p class="lede">Choosing the Right Agile Framework</p>
+  <div class="wrap">
+    <header class="site" aria-label="Site header">
+      <a class="home" href="./index.html">← Home</a>
     </header>
 
-    <article class="content">
-      <p><strong>Scrum</strong> and <strong>Kanban</strong> are two of the most widely used agile methodologies, but which one is right for your team?</p>
+    <div class="grid">
+      <!-- Left gutter (empty on desktop for breathing room) -->
+      <div aria-hidden="true"></div>
 
-      <p>Scrum is structured. It works in fixed-length iterations (sprints), with ceremonies like daily standups, sprint planning, and retrospectives. It’s great for teams that need rhythm, structure, and clear delivery goals.</p>
+      <!-- Main article -->
+      <article id="top" role="main" aria-labelledby="title">
+        <h1 id="title">About This Site</h1>
+        <p class="sub">Why this exists, what I believe, and how to read it.</p>
 
-      <p>Kanban is flexible. It focuses on continuous delivery, visualizing work in progress, and optimizing flow. Ideal for teams with lots of incoming work or frequent changes in priority.</p>
+        <div class="rule" aria-hidden="true"></div>
 
-      <blockquote>
-        The best framework is the one that fits your team’s needs — not the one that looks best in a slide deck.
-      </blockquote>
+        <p class="lead">
+          I’m not here to give you financial advice — I’m not regulated, and I don’t want to be.
+          I built this site because the more I learned about the financial world, the more I needed
+          to make sense of it. Writing helps me map relationships, connect concepts, and see the bigger picture.
+        </p>
 
-      <h2>When to Use Scrum</h2>
-      <ul>
-        <li>You’re working in a stable product team</li>
-        <li>You want to focus on planning, learning, and improving each sprint</li>
-        <li>You can commit to regular ceremonies and roles</li>
-      </ul>
+        <section id="why-individuals-have-an-edge" aria-labelledby="edge">
+          <h2 id="edge">Why Individuals Often Have an Edge</h2>
+          <p>
+            After more than a decade in financial services, I’ve learned something that isn’t obvious:
+            individuals can have a structural advantage over professionals. In high-street banks and large institutions,
+            <em>incentives and regulation</em> shape what can be offered. Product shelves reflect compliance and
+            self-interest as much as what’s best for clients. Specialists get pigeonholed into narrow lanes and miss
+            entire corners of the market.
+          </p>
+          <p>
+            Crypto is a good example. Big institutions often avoid talking about it — not because they don’t understand it,
+            but because it’s volatile, largely unregulated, and awkward to fit into their model. The silence can look
+            out-of-touch to younger investors. The result: it’s hard to get a clear picture from any single source.
+          </p>
+        </section>
 
-      <h2>When to Use Kanban</h2>
-      <ul>
-        <li>Your work is unpredictable (support, ops, etc.)</li>
-        <li>You want to limit WIP (work in progress)</li>
-        <li>You want to optimize for flow rather than iterations</li>
-      </ul>
+        <section id="what-this-site-is" aria-labelledby="what">
+          <h2 id="what">What This Site Is (and Isn’t)</h2>
+          <div class="callout" role="note" aria-label="Important reminder">
+            <p><strong>Important:</strong> This site is <strong>not</strong> financial advice. I’m not FCA-regulated, and I don’t intend to be.</p>
+          </div>
+          <p>
+            I share how I invest, the tools I use, and the principles that guide me — not to tell you what to do,
+            but to cut through noise so you can think for yourself. Everyone is involved in financial markets whether
+            they like it or not; the goal here is to make sense of what’s happening, plainly and transparently.
+          </p>
+        </section>
 
-      <p>Personally, I’ve seen hybrid models work incredibly well. Many teams start with Scrum to learn structure, then evolve toward a Kanban-style approach as they mature.</p>
+        <section id="principles" aria-labelledby="rules">
+          <h2 id="rules">Operating Principles</h2>
+          <ul class="principles">
+            <li><strong>I might be wrong.</strong> Change your mind when the evidence changes.</li>
+            <li><strong>No advice.</strong> I don’t give financial advice. Ever.</li>
+            <li><strong>Keep digging.</strong> Stay curious. Trace claims to first principles and data.</li>
+          </ul>
+        </section>
 
-      <p>What’s your experience? <a href="../about.html#contact">Reach out and let’s compare notes</a>.</p>
-    </article>
-  </main>
+        <section id="why-now" aria-labelledby="now">
+          <h2 id="now">Why This Matters Now</h2>
+          <p>
+            The truth is, nobody will ever care more about your money than you. With inflation quietly eroding savings and
+            state pensions under strain, <em>investing is no longer optional</em>.
+          </p>
+          <blockquote>
+            <p><strong>Good news:</strong> it’s never been easier or cheaper to start.<br>
+            <strong>Bad news:</strong> it’s never been more important.</p>
+          </blockquote>
+        </section>
 
-  <footer>
-    <span class="boops">Thanks for reading! 👋</span>
-    <nav class="footer-nav">
-      <a href="../posts.html">Posts</a>
-      <a href="../newsletter.html">Newsletter</a>
-      <a href="../uses.html">Uses</a>
-    </nav>
-  </footer>
+        <a class="back" href="./index.html">Back to Home</a>
+      </article>
+
+      <!-- Sticky TOC -->
+      <aside class="toc" aria-label="On this page">
+        <h2>On this page</h2>
+        <nav>
+          <a href="#why-individuals-have-an-edge">Why Individuals Have an Edge</a>
+          <a href="#what-this-site-is">What This Site Is (and Isn’t)</a>
+          <a href="#principles">Operating Principles</a>
+          <a href="#why-now">Why This Matters Now</a>
+          <a href="#top">Back to Top</a>
+        </nav>
+      </aside>
+    </div>
+  </div>
 </body>
 </html>

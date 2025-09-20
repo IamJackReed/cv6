@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About</title>
+
+  <!-- Your consolidated stylesheet -->
+  <link rel="stylesheet" href="css/global.css" />
+
+  <style>
+    :root { --card-max: 700px; }
+
+    body {
+      line-height: 1.6;
+      display: grid;
+      place-items: start center;
+      min-height: 100svh;
+      padding: 2rem 1rem;
+      background: var(--color-background);
+      color: var(--color-foreground);
+    }
+
+    main {
+      width: min(90vw, var(--card-max));
+      margin-top: 6rem;
+      padding: 1.25rem 1.25rem 1.5rem;
+      background: #1e083c;
+      border: 2px solid hotpink;
+      border-radius: 1rem;
+      box-sizing: border-box;
+    }
+
+    main * + * { margin-top: 1rem; }
+
+    h1 {
+      color: var(--color-gray-000);
+      font-size: 2rem;
+      line-height: 1.2;
+      margin-top: 0;
+    }
+
+    p, li {
+      color: var(--color-gray-000);
+    }
+
+    ul {
+      padding-left: 1.25rem;
+    }
+
+    .button {
+      display: inline-block;
+      text-align: center;
+      padding: 0.75rem 1.5rem;
+      background-color: var(--color-button-bg);
+      color: hotpink;
+      text-decoration: none;
+      border: 2px solid hotpink;
+      border-radius: 0.5rem;
+      font-weight: 900;
+      letter-spacing: .02em;
+      text-transform: uppercase;
+    }
+    .button:hover,
+    .button:focus {
+      background-color: var(--color-button-hover-bg);
+      color: var(--color-button-hover-text);
+      border-color: var(--color-button-hover-border);
+      outline: 0;
+    }
+
+    @media (max-width: 600px) {
+      body { padding: 1.5rem .75rem; }
+      main { margin-top: 2.5rem; padding: 1.25rem; }
+    }
+  </style>
+</head>
+<body>
+  <main role="main" aria-labelledby="about-title">
+    <h1 id="about-title">👋 About This Site</h1>
+
+    <p>I’m not here to give you financial advice — I’m not regulated, and I don’t want to be.</p>
+
+    <p>I built this site for one reason: the more I learned about the financial world, the more I wanted to make sense of it. Writing things down helped me spot connections, map out relationships, and see the bigger picture.</p>
+
+    <p>After more than a decade working in financial services, I’ve realised something most people don’t know — individuals often have an edge over the professionals.</p>
+
+    <p>Why? Because in high street banks and large institutions, incentives and regulations dictate what can be offered. Product ranges are shaped as much by self-interest and compliance as by what’s genuinely best for clients. Specialists get stuck in narrow lanes, ignoring large parts of the market.</p>
+
+    <p>Crypto is a perfect example. Institutions rarely talk about it — not because they don’t understand it, but because it’s volatile, unregulated, and awkward to fit into their model. The silence can make them seem out of touch, especially to younger investors. The truth? Everyone is involved in the financial markets whether they like it or not — but finding a single, unbiased source is almost impossible.</p>
+
+    <p>That’s where this site comes in. I share how I invest, the tools I use, and the principles I follow — not to tell you what to do, but to cut through the noise so you can think for yourself.</p>
+
+    <p><strong>My principles are simple:</strong></p>
+    <ul>
+      <li>I might be wrong.</li>
+      <li>I will never give you financial advice.</li>
+      <li>I’ll always keep digging for the truth.</li>
+    </ul>
+
+    <p>The truth is, nobody will ever care more about your money than you. And with inflation quietly eroding savings and state pensions under strain, investing is no longer optional.</p>
+
+    <p><strong>Good news:</strong> it’s never been easier or cheaper to start.<br>
+       <strong>Bad news:</strong> it’s never been more important.</p>
+
+    <a class="button" href="./index.html">⬅ Back to Home</a>
+  </main>
+</body>
+</html>
