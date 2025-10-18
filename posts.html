@@ -3,8 +3,73 @@ body{background:var(--gray-700);margin:0;&:not(.simple){@supports (interpolate-s
 @property --font-size{syntax: "<number>"; initial-value: 1; inherits: true;}header[data-astro-cid-hpnw4vwy]{background:url(images/header.jpg);background-position:center;background-size:cover;border-block-end:4px solid var(--gray-700);color:var(--white);display:flex;flex-direction:column;inline-size:100%;max-inline-size:100dvi;padding:25px 5cqi 15px;place-content:center;z-index:100;h1,p{margin:0}.name,.tagline{display:block;line-height:.8;margin:0;text-align:center;text-box-trim:trim-both;text-shadow:1px 2px var(--gray-700);text-spacing-trim:space-all}.name{font-family:var(--font-heading);font-size:calc(var(--font-size) * clamp(1rem,3.2cqi,2.5rem));&:after{background:var(--white);block-size:3px;border-radius:1px;content:"";display:block;inline-size:min(87cqi,13ch);margin-inline:auto}}.tagline{font-family:var(--font-subheading);font-size:5.65cqi;font-size:calc(var(--font-size) * clamp(.8rem,2.825cqi,2.2rem));margin-block-start:16px}nav{display:flex;flex-wrap:wrap;font-family:var(--font-heading);gap:5px;justify-content:center;margin-inline:auto;inline-size:min(var(--font-size) * 50ch,90cqi);padding-inline:1cqi;a{background:var(--purple);border-radius:1px;color:var(--white);display:inline-block;font-size:calc(var(--font-size) * clamp(.8rem,.85cqi,1rem));padding:10px 1cqi 5px;text-decoration:none;&:is(:hover,:active,:focus),&.active{background:var(--white);color:var(--gray-900)}}}}@supports (interpolate-size: allow-keywords){body:not(.simple) header{@media (min-width: 1000px){animation:header-resize cubic-bezier(0,0,.5,.55) forwards;animation-timeline:scroll();animation-range:0dvb 85dvb;block-size:100dvb;position:fixed;inset-block-start:0}}}@keyframes header-resize{0%{--font-size: 2;height:min(100dvb,100dvi)}to{--font-size: 1;height:auto}}
 section[data-astro-cid-ijnerlr2]{--columns: 1;display:grid;gap:4px;grid-template-columns:repeat(var(--columns),calc((100cqi - (var(--columns) + 1) * 4px) / var(--columns)));padding:0 4px 4px;@media (min-width: 500px){--columns: 2}@media (min-width: 750px){--columns: 3}@media (min-width: 1000px){--columns: 4}@media (min-width: 1480px){--columns: 6}}article[data-astro-cid-ijnerlr2]{container:article / inline-size;align-items:center;block-size:100%;border:1px solid transparent;border-radius:3px;color:var(--gray-100);display:flex;flex-direction:column;justify-content:stretch;.image{aspect-ratio:16 / 9;block-size:auto;display:block;inline-size:100%}img{aspect-ratio:16 / 9;block-size:auto;border-radius:3px 3px 0 0;inline-size:100%}.details{background:var(--gray-600);block-size:100%;border-radius:0 0 3px 3px;display:flex;flex-direction:column;gap:8px;justify-content:start;padding:16px 8px}:is(h2,p){margin:0}h2{color:var(--white);font-family:var(--font-subheading);font-size:clamp(1rem,7cqi,2.5rem);line-height:1.1;a{color:inherit;text-decoration:none}}.read-more{margin-block-start:auto}&:has(:hover,:focus){border-color:var(--gray-600);.details{background:var(--gray-900)}}}
 </style></head> <body class="simple" data-astro-cid-5z7xtygo=""> <main data-astro-cid-5z7xtygo=""> 
-	
-  <!-- Top Header (Jason-style) -->
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Redirect to disclaimer if not accepted -->
+  <script>
+    if (!localStorage.getItem('disclaimerAccepted')) {
+      window.location.href = 'disclaimer.html';
+    }
+  </script>
+
+  <!-- Preload self-hosted fonts (SUBPATH-SAFE: no leading /) -->
+  <link rel="preload" href="fonts/jwf-book.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/jwf-bookitalic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/jwf-bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/jwf-bolditalic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/jwf-ultra.woff2" as="font" type="font/woff2" crossorigin>
+
+  <!-- Preload sounds (webm + mp3 for Safari/iOS) -->
+  <link rel="preload" href="images/bb8.webm" as="audio">
+  <link rel="preload" href="images/bb8.mp3" as="audio">
+
+  <!-- Preconnect for external assets -->
+  <link rel="preconnect" href="https://res.cloudinary.com" crossorigin>
+
+  <!-- Global CSS -->
+  <link rel="stylesheet" href="css/global.css" />
+
+  <!-- Favicons & Manifest (SUBPATH-SAFE) -->
+  <link rel="apple-touch-icon" sizes="152x152" href="images/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png" />
+  <link rel="mask-icon" href="images/safari-pinned-tab.svg" color="#ff87d4" />
+  <meta name="msapplication-TileColor" content="#ffe742" />
+  <meta name="theme-color" content="#ffe742" />
+
+  <!-- SEO & Social -->
+  <title>Jack Reed — Scrum Master</title>
+  <link rel="canonical" href="https://iamjackreed.github.io/cv6/" />
+  <meta name="description" content="Jack Reed - Scrum Master working in London at Legal & General." />
+  <meta name="image" content="https://iamjackreed.github.io/cv6/images/og-image.jpg" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://iamjackreed.github.io/cv6/" />
+  <meta property="og:title" content="Jack Reed" />
+  <meta property="og:description" content="Jack Reed - Scrum Master working in London at Legal & General." />
+  <meta property="og:image" content="https://iamjackreed.github.io/cv6/images/og-image.jpg" />
+
+  <meta name="twitter:dnt" content="on" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:creator" content="@" />
+  <meta name="twitter:title" content="Jack Reed" />
+  <meta name="twitter:description" content="Scrum Master working in London at Legal & General." />
+  <meta name="twitter:image" content="https://iamjackreed.github.io/cv6/images/og-image.jpg" />
+
+  <!-- RSS (SUBPATH-SAFE) -->
+  <link rel="alternate" type="application/rss+xml" title="RSS Feed for jack.reed" href="feed.xml" />
+
+  <!-- Rel Me -->
+  <link href="https://hachyderm.io/@" rel="me" />
+  <link href="https://twitter.com/" rel="me" />
+  <link href="https://github.com/" rel="me" />
+</head>
+
+ <!-- Top Header (Jason-style) -->
   <header class="jl-topbar" role="banner" aria-label="Global">
     <nav class="jl-nav" aria-label="Primary">
       <ul class="jl-links">
